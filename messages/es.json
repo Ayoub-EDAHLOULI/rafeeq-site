@@ -10,11 +10,15 @@
     "docs": "Documentación",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
-    "theme": "Cambiar entre tema claro y oscuro"
+    "theme": "Cambiar entre tema claro y oscuro",
+    "language": "Idioma"
   },
   "footer": {
     "rights": "Con licencia MIT.",
-    "builtBy": "Creado por"
+    "builtBy": "Creado por",
+    "description": "Un compañero de IA totalmente sin conexión para ayuda con código, preguntas sobre documentos y resúmenes.",
+    "product": "Producto",
+    "project": "Proyecto"
   },
   "home": {
     "tagline": "رفيق — «compañero» en árabe",

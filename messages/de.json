@@ -10,11 +10,15 @@
     "docs": "Dokumentation",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "theme": "Zwischen hellem und dunklem Design wechseln"
+    "theme": "Zwischen hellem und dunklem Design wechseln",
+    "language": "Sprache"
   },
   "footer": {
     "rights": "MIT-lizenziert.",
-    "builtBy": "Erstellt von"
+    "builtBy": "Erstellt von",
+    "description": "Ein vollständig offline arbeitender KI-Begleiter für Code-Hilfe, Fragen zu Dokumenten und Zusammenfassungen.",
+    "product": "Produkt",
+    "project": "Projekt"
   },
   "home": {
     "tagline": "رفيق — „Begleiter“ auf Arabisch",

@@ -10,11 +10,15 @@
     "docs": "Docs",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "theme": "Switch light or dark theme"
+    "theme": "Switch light or dark theme",
+    "language": "Language"
   },
   "footer": {
     "rights": "MIT licensed.",
-    "builtBy": "Built by"
+    "builtBy": "Built by",
+    "description": "A fully offline AI companion for code help, document Q&A and summarization.",
+    "product": "Product",
+    "project": "Project"
   },
   "home": {
     "tagline": "رفيق — \"companion\" in Arabic",

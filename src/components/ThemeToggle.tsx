@@ -36,7 +36,7 @@ export default function ThemeToggle() {
   const t = useTranslations("nav");
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  if (!theme) return <span aria-hidden className="h-8 w-8 shrink-0" />;
+  if (!theme) return <span aria-hidden className="h-11 w-11 shrink-0" />;
 
   function toggle() {
     const next: Theme = theme === "dark" ? "light" : "dark";
@@ -53,24 +53,24 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={t("theme")}
-      className="flex h-8 w-8 items-center justify-center rounded-md text-subtext transition-colors hover:bg-input-bg hover:text-text"
+      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-muted transition-colors hover:bg-panel-2 hover:text-text"
     >
       {theme === "dark" ? (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.75" />
           <path
             d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
             stroke="currentColor"
-            strokeWidth="1.6"
+            strokeWidth="1.75"
             strokeLinecap="round"
           />
         </svg>
       ) : (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <path
             d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"
             stroke="currentColor"
-            strokeWidth="1.6"
+            strokeWidth="1.75"
             strokeLinejoin="round"
           />
         </svg>

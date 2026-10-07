@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -15,6 +15,7 @@ const LOCALE_LABELS: Record<string, string> = {
 };
 
 export default function LocaleSwitcher() {
+  const t = useTranslations("nav");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -32,8 +33,8 @@ export default function LocaleSwitcher() {
     <select
       value={locale}
       onChange={(e) => handleChange(e.target.value)}
-      aria-label="Select language"
-      className="rounded-md border border-border bg-card px-2 py-1.5 text-sm text-text focus:outline-none focus:ring-1 focus:ring-primary"
+      aria-label={t("language")}
+      className="h-11 rounded-[10px] border border-line-strong bg-panel px-3 text-text"
     >
       {routing.locales.map((l) => (
         <option key={l} value={l}>

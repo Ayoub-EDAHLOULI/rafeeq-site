@@ -10,11 +10,15 @@
     "docs": "文档",
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
-    "theme": "切换浅色或深色主题"
+    "theme": "切换浅色或深色主题",
+    "language": "语言"
   },
   "footer": {
     "rights": "采用 MIT 许可证。",
-    "builtBy": "开发者："
+    "builtBy": "开发者：",
+    "description": "完全离线的 AI 伙伴，用于代码帮助、文档问答和摘要。",
+    "product": "产品",
+    "project": "项目"
   },
   "home": {
     "tagline": "رفيق — 阿拉伯语中意为「伙伴」",
