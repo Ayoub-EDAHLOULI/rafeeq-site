@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -11,14 +12,42 @@ import { routing, rtlLocales } from "@/i18n/routing";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Fonts are downloaded at build time and served from this site; the browser
+// never contacts Google. See --font-sans in globals.css for the stack order.
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500"],
+});
+
+// IBM Plex Sans Arabic, Arabic subset only (files from Google Fonts, OFL
+// license in src/assets/fonts/OFL.txt). Loaded locally because
+// next/font/google always declares every subset and, in this Next version,
+// ignores adjustFontFallback: false; an Arial fallback face would capture
+// Arabic text on Windows. Not preloaded: only pages with Arabic text fetch it.
+const plexArabic = localFont({
+  variable: "--font-plex-arabic",
+  src: [
+    { path: "../../assets/fonts/IBMPlexSansArabic-400-arabic.woff2", weight: "400" },
+    { path: "../../assets/fonts/IBMPlexSansArabic-500-arabic.woff2", weight: "500" },
+    { path: "../../assets/fonts/IBMPlexSansArabic-600-arabic.woff2", weight: "600" },
+  ],
+  // Arabic blocks only (single literal: next/font requires literal values).
+  declarations: [
+    {
+      prop: "unicode-range",
+      value:
+        "U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFC",
+    },
+  ],
+  preload: false,
+  adjustFontFallback: false,
 });
 
 // Mobile browser bar color; follows the OS setting. Keep in sync with --bg
@@ -69,7 +98,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${hanken.variable} ${jetbrainsMono.variable} ${plexArabic.variable} h-full antialiased`}
       // The head script sets data-theme before React hydrates.
       suppressHydrationWarning
     >

@@ -86,19 +86,17 @@
   --color-border: var(--line);
   --color-input-bg: var(--panel-2);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Plex Arabic first: it only contains Arabic glyphs, so Latin text and
+     digits fall through to Hanken Grotesk and Chinese to the system fonts. */
+  --font-sans:
+    var(--font-plex-arabic), var(--font-hanken), "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui,
+    sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    Avenir,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: var(--font-sans);
 }
