@@ -49,7 +49,7 @@ export default function Nav() {
           ))}
           <Link
             href="/download"
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-accent transition-opacity hover:opacity-90"
           >
             {t("download")}
           </Link>
@@ -101,7 +101,7 @@ export default function Nav() {
           <Link
             href="/download"
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="mt-2 rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-on-accent transition-opacity hover:opacity-90"
           >
             {t("download")}
           </Link>

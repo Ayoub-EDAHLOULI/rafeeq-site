@@ -13,7 +13,7 @@ export default function Footer() {
           {t("builtBy")}{" "}
           <a
             href="https://ayoubedahlouli.com"
-            className="font-medium text-text hover:text-primary"
+            className="font-medium text-text hover:text-accent-fg"
           >
             Ayoub Edahlouli
           </a>

@@ -75,7 +75,7 @@ export default function DownloadPage() {
             <Press className="mt-4">
               <a
                 href={variant.href}
-                className="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                className="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-accent transition-opacity hover:opacity-90"
               >
                 {t("downloadButton")}
               </a>
@@ -88,7 +88,7 @@ export default function DownloadPage() {
         {t("footer")}{" "}
         <a
           href="https://github.com/Ayoub-EDAHLOULI/Rafeeq"
-          className="font-medium text-text hover:text-primary"
+          className="font-medium text-text hover:text-accent-fg"
         >
           GitHub
         </a>

@@ -51,7 +51,6 @@ const FADE_MAX_RADIUS_X = 460;
 // Alphas are quantised into buckets so a frame needs at most a few dozen
 // stroke/fill calls regardless of how many lines are visible.
 const ALPHA_LEVELS = 32;
-const FALLBACK_COLOR = "#1d63ed";
 
 function smoothstep(edge0: number, edge1: number, x: number) {
   const t = Math.min(1, Math.max(0, (x - edge0) / (edge1 - edge0)));
@@ -114,7 +113,7 @@ export default function ParticleField() {
     const particles: Particle[] = [];
     const dust: Particle[] = [];
     let focus = { cx: 0, cy: 0, rx: 1, ry: 1 };
-    let color = FALLBACK_COLOR;
+    let color = "";
     let rect = canvas.getBoundingClientRect();
     let pointer: { x: number; y: number } | null = null;
 
@@ -129,10 +128,10 @@ export default function ParticleField() {
     const darkSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const readColor = () => {
-      const value = getComputedStyle(canvas)
-        .getPropertyValue("--particle-color")
-        .trim();
-      color = value || FALLBACK_COLOR;
+      // Theme token from globals.css; the inherited text color is only a
+      // fallback if the variable is missing.
+      const style = getComputedStyle(canvas);
+      color = style.getPropertyValue("--particle-color").trim() || style.color;
     };
 
     const lineBuckets = createBuckets();

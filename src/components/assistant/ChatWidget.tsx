@@ -30,7 +30,7 @@ const LINK_PATTERN =
 function renderWithLinks(text: string): ReactNode[] {
   return text.split(LINK_PATTERN).map((part, i) => {
     if (i % 2 === 0) return <Fragment key={i}>{part}</Fragment>;
-    const className = "font-medium text-primary underline underline-offset-2";
+    const className = "font-medium text-accent-fg underline underline-offset-2";
     return part.startsWith("/") ? (
       <Link key={i} href={part} className={className}>
         {part}
@@ -247,7 +247,7 @@ export default function ChatWidget() {
                   transition={{ duration: 0.3, ease: EASE }}
                   className={
                     msg.role === "user"
-                      ? "ms-auto max-w-[85%] rounded-2xl rounded-se-sm bg-primary px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-white"
+                      ? "ms-auto max-w-[85%] rounded-2xl rounded-se-sm bg-primary px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-on-accent"
                       : "max-w-[85%] rounded-2xl rounded-ss-sm bg-input-bg px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-text"
                   }
                 >
@@ -300,7 +300,7 @@ export default function ChatWidget() {
                   <button
                     type="submit"
                     disabled={!input.trim()}
-                    className="rounded-lg bg-primary px-3 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
+                    className="rounded-lg bg-primary px-3 py-2 text-sm font-medium text-on-accent transition-opacity hover:opacity-90 disabled:opacity-40"
                   >
                     {t("send")}
                   </button>

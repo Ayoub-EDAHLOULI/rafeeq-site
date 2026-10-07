@@ -1,61 +1,97 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens (design/TOKENS.md). Light values in :root, dark values when
+ * the toggle sets data-theme="dark", and the OS preference as the default
+ * until a theme is chosen. --line-strong is for form-field borders only
+ * (3:1 against bg and panel); --danger should be used on panel surfaces.
+ */
 :root {
-  --background: #f7f8fa;
-  --card: #ffffff;
-  --text: #17191c;
-  --subtext: #6b7280;
-  --primary: #1d63ed;
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --panel-2: #eceef2;
+  --line: #dcdfe6;
+  --line-strong: #858d9b;
+  --text: #12151b;
+  --muted: #4d5666;
+  --faint: #5b6575;
+  --accent: #2257d6;
+  --accent-fg: #1d4fc4;
+  --on-accent: #ffffff;
+  --dot: #15803d;
   --danger: #d92d20;
-  --border: #e2e5ea;
-  --input-bg: #eef0f3;
-  --particle-color: #1d63ed;
+  --particle-color: #1d4fc4;
   color-scheme: light;
 }
 
 :root[data-theme="dark"] {
-  --background: #000000;
-  --card: #1c1c1e;
-  --text: #ffffff;
-  --subtext: #98989f;
-  --primary: #0a84ff;
+  --bg: #0a0c10;
+  --panel: #11141a;
+  --panel-2: #181c24;
+  --line: #252b36;
+  --line-strong: #5a6373;
+  --text: #e9ecf1;
+  --muted: #9ba4b3;
+  --faint: #8791a1;
+  --accent: #2f6fed;
+  --accent-fg: #8ab4ff;
+  --on-accent: #ffffff;
+  --dot: #4ade80;
   --danger: #ff453a;
-  --border: #38383a;
-  --input-bg: #2c2c2e;
-  --particle-color: #7fb2ff;
+  --particle-color: #8ab4ff;
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --background: #000000;
-    --card: #1c1c1e;
-    --text: #ffffff;
-    --subtext: #98989f;
-    --primary: #0a84ff;
+    --bg: #0a0c10;
+    --panel: #11141a;
+    --panel-2: #181c24;
+    --line: #252b36;
+    --line-strong: #5a6373;
+    --text: #e9ecf1;
+    --muted: #9ba4b3;
+    --faint: #8791a1;
+    --accent: #2f6fed;
+    --accent-fg: #8ab4ff;
+    --on-accent: #ffffff;
+    --dot: #4ade80;
     --danger: #ff453a;
-    --border: #38383a;
-    --input-bg: #2c2c2e;
-    --particle-color: #7fb2ff;
+    --particle-color: #8ab4ff;
     color-scheme: dark;
   }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-card: var(--card);
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
   --color-text: var(--text);
-  --color-subtext: var(--subtext);
-  --color-primary: var(--primary);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-on-accent: var(--on-accent);
+  --color-dot: var(--dot);
   --color-danger: var(--danger);
-  --color-border: var(--border);
-  --color-input-bg: var(--input-bg);
+
+  /* Legacy aliases so existing classes pick up the new palette. Removed in
+     the cleanup step once every component uses the names above. */
+  --color-background: var(--bg);
+  --color-card: var(--panel);
+  --color-subtext: var(--muted);
+  --color-primary: var(--accent);
+  --color-border: var(--line);
+  --color-input-bg: var(--panel-2);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
+  background: var(--bg);
   color: var(--text);
   font-family:
     Inter,

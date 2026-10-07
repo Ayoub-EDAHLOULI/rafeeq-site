@@ -24,7 +24,7 @@ export default function DocsPage() {
               downloadLink: (chunks) => (
                 <Link
                   href="/download"
-                  className="font-medium text-text hover:text-primary"
+                  className="font-medium text-text hover:text-accent-fg"
                 >
                   {chunks}
                 </Link>
@@ -68,7 +68,7 @@ export default function DocsPage() {
             {t("moreDescription")}{" "}
             <a
               href="https://github.com/Ayoub-EDAHLOULI/Rafeeq"
-              className="font-medium text-text hover:text-primary"
+              className="font-medium text-text hover:text-accent-fg"
             >
               {t("readmeLink")}
             </a>

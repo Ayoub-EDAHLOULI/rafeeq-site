@@ -26,7 +26,7 @@ export default function HomePage() {
           className="relative mx-auto max-w-5xl px-6 pb-16 pt-20 text-center sm:pt-28"
         >
           <Stagger trigger="mount" interval={0.18}>
-            <StaggerItem as="p" className="mb-4 text-sm font-medium text-primary">
+            <StaggerItem as="p" className="mb-4 text-sm font-medium text-accent-fg">
               {t("tagline")}
             </StaggerItem>
             <AnimatedWords
@@ -43,7 +43,7 @@ export default function HomePage() {
               <Press>
                 <Link
                   href="/download"
-                  className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                  className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-on-accent transition-opacity hover:opacity-90"
                 >
                   {t("downloadCta")}
                 </Link>
