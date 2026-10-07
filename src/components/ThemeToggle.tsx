@@ -1,40 +1,58 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+import { useTranslations } from "next-intl";
+import { THEME_STORAGE_KEY, type Theme } from "@/lib/theme";
 
-type Theme = "light" | "dark";
+const darkQuery = () => window.matchMedia("(prefers-color-scheme: dark)");
 
-const STORAGE_KEY = "rafeeq-site-theme";
-
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === "light" || stored === "dark") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+// The effective theme is the data-theme attribute (set by the head script
+// or a click), or the OS preference when no choice has been made. Watch
+// both so the icon stays correct when either changes.
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+  const query = darkQuery();
+  query.addEventListener("change", onChange);
+  return () => {
+    observer.disconnect();
+    query.removeEventListener("change", onChange);
+  };
 }
 
+function getSnapshot(): Theme {
+  const attr = document.documentElement.getAttribute("data-theme");
+  if (attr === "light" || attr === "dark") return attr;
+  return darkQuery().matches ? "dark" : "light";
+}
+
+// The server can't know the theme; render a same-size placeholder instead.
+const getServerSnapshot = () => null;
+
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme | null>(null);
+  const t = useTranslations("nav");
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  useEffect(() => {
-    setTheme(getInitialTheme());
-  }, []);
+  if (!theme) return <span aria-hidden className="h-8 w-8 shrink-0" />;
 
-  useEffect(() => {
-    if (!theme) return;
-    document.documentElement.setAttribute("data-theme", theme);
-    window.localStorage.setItem(STORAGE_KEY, theme);
-  }, [theme]);
-
-  if (!theme) return null;
+  function toggle() {
+    const next: Theme = theme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, next);
+    } catch {
+      // Storage unavailable (private mode): the choice lasts for this page.
+    }
+  }
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      aria-label="Toggle theme"
+      onClick={toggle}
+      aria-label={t("theme")}
       className="flex h-8 w-8 items-center justify-center rounded-md text-subtext transition-colors hover:bg-input-bg hover:text-text"
     >
       {theme === "dark" ? (

@@ -9,7 +9,8 @@
     "download": "下载",
     "docs": "文档",
     "openMenu": "打开菜单",
-    "closeMenu": "关闭菜单"
+    "closeMenu": "关闭菜单",
+    "theme": "切换浅色或深色主题"
   },
   "footer": {
     "rights": "采用 MIT 许可证。",

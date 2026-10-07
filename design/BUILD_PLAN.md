@@ -228,7 +228,7 @@ The files go in `public/screens/` (or `src/assets/screens/` for static imports w
 
 ### 6.1 i18n
 - No visible string is written into a component. Exceptions: brand and proper nouns (Rafeeq, رفيق, GitHub, README, Windows), file names, paths, code and checksums.
-- **For every step with new copy:** I write the English first, then draft the five other languages. Each drafted string is listed in my step summary as **"needs native review"**, and nothing is marked as reviewed until you approve. All six files keep the same keys; a parity check like the one I ran for this plan runs after each step.
+- **For every step with new copy (decided after plan approval):** I write the English first, then draft the five other languages, and **every new key goes into all six files in the same step**. There is no English fallback. Each drafted string is listed in my step summary as **"needs native review"**, and nothing is marked as reviewed until you approve. All six files keep identical keys; a parity check runs after each step.
 - Numbers and sizes are formatted with `Intl.NumberFormat(locale)` according to D5, never typed into strings.
 
 ### 6.2 RTL (Arabic)

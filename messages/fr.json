@@ -9,7 +9,8 @@
     "download": "Télécharger",
     "docs": "Documentation",
     "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu"
+    "closeMenu": "Fermer le menu",
+    "theme": "Basculer entre thème clair et sombre"
   },
   "footer": {
     "rights": "Sous licence MIT.",

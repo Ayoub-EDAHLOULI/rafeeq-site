@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import MotionProvider from "@/components/motion/MotionProvider";
 import ChatWidget from "@/components/assistant/ChatWidget";
 import { routing, rtlLocales } from "@/i18n/routing";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,6 +20,15 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+// Mobile browser bar color; follows the OS setting. Keep in sync with --bg
+// in globals.css.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f6f8" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0c10" },
+  ],
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -60,7 +70,12 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // The head script sets data-theme before React hydrates.
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-text">
         <NextIntlClientProvider>
           <MotionProvider>
