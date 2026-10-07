@@ -226,6 +226,9 @@ The files go in `public/screens/` (or `src/assets/screens/` for static imports w
 
 ## 6. Constraints checklist
 
+### 6.0 Type scale (decided during step 5)
+The owner asked for smaller type than design/TOKENS.md. The scale lives as theme tokens in `globals.css` (`text-hero`, `text-page`, `text-section`, `text-title`, `text-lead`). Body text is 16 px and large buttons are 48 px tall. Every page step uses these tokens instead of the TOKENS.md pixel sizes.
+
 ### 6.1 i18n
 - No visible string is written into a component. Exceptions: brand and proper nouns (Rafeeq, رفيق, GitHub, README, Windows), file names, paths, code and checksums.
 - **For every step with new copy (decided after plan approval):** I write the English first, then draft the five other languages, and **every new key goes into all six files in the same step**. There is no English fallback. Each drafted string is listed in my step summary as **"needs native review"**, and nothing is marked as reviewed until you approve. All six files keep identical keys; a parity check runs after each step.

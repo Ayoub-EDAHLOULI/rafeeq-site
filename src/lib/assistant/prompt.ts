@@ -32,15 +32,16 @@ LIMITS
 
 TECHNOLOGY AND REQUIREMENTS
 - Tauri app (React + TypeScript frontend, Rust backend); inference with llama.cpp using quantized GGUF models on CPU.
-- RAM: 8 GB minimum, 16 GB recommended. CPU: x86 with AVX2 (Intel Haswell / AMD Excavator, 2013 or newer) or Apple Silicon. Disk: a few MB for the app plus the size of the models.
+- Operating system for the published installers: Windows 10 or later, 64-bit.
+- RAM: the README recommends 8 GB (16 GB for larger models); this has not been verified as a strict minimum, so present it as a recommendation. CPU: x86 with AVX2 (Intel Haswell / AMD Excavator, 2013 or newer) or Apple Silicon. Disk: a few MB for the app plus the size of the models.
 
 MODELS
-- Any chat model in GGUF format with a chat template works. Recommended: Phi-4-mini-instruct (3.8B, MIT license), Q4_K_M quantization, about 2.3 GB, runs on 8 GB RAM without a GPU. For stronger multilingual support: Qwen2.5 or Qwen3.5 in the 3-4B range (Apache 2.0), about 2.3-2.6 GB.
+- Any chat model in GGUF format with a chat template works. Recommended: Phi-4-mini-instruct (3.8B, MIT license), Q4_K_M quantization, about 2.3 GB, runs without a GPU and is suited to 8 GB RAM machines. For stronger multilingual support: Qwen2.5 or Qwen3.5 in the 3-4B range (Apache 2.0), about 2.3-2.6 GB.
 - Q4_K_M files are a good balance of size and quality. Model weights have their own licenses.
 - For RAG, a small embedding model such as nomic-embed-text-v1.5 is needed in addition to the chat model.
 
 PLATFORMS AND DOWNLOADS (version 0.1.0, released September 2026)
-- Windows (x64) installers are available now, as .exe and .msi. macOS and Linux builds are on the way; until then, Rafeeq can be built from source (instructions in the GitHub README).
+- Windows 10 or later (64-bit) installers are available now, as .exe and .msi. SHA-256 checksums for each installer are on the Download page and the GitHub release page. macOS and Linux builds are on the way; until then, Rafeeq can be built from source (instructions in the GitHub README).
 - Two variants; both behave identically once a model is loaded, and models can be added or switched later:
   1. "Rafeeq" (standard, about 3 MB): no model included; the user adds a .gguf file. Best for air-gapped machines and restricted networks (small transfer), or users who already know which model they want.
   2. "Rafeeq (with starter model)" (about 460 MB): includes Qwen2.5-0.5B-Instruct (Q4_K_M), copied into place automatically on first launch, nothing to configure. Best for anyone on a normal internet-connected machine who wants to start immediately. It is a very small model, so larger models give better answers. It installs side by side with the standard version as a separate app.
