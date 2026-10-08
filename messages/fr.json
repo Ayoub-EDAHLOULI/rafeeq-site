@@ -4,7 +4,6 @@
     "description": "Rafeeq est un assistant IA de bureau entièrement hors ligne et local, pour l'aide au code, les questions sur vos documents et le résumé — conçu pour les machines isolées et à réseau restreint."
   },
   "nav": {
-    "home": "Accueil",
     "features": "Fonctionnalités",
     "download": "Télécharger",
     "docs": "Documentation",
@@ -24,8 +23,6 @@
     "tagline": "signifie « compagnon » en arabe",
     "title": "Votre compagnon IA entièrement hors ligne",
     "subtitle": "Rafeeq est un assistant IA de bureau local pour l'aide au code, les questions sur vos documents et le résumé — conçu pour les machines qui ne verront jamais Internet.",
-    "downloadCta": "Télécharger Rafeeq",
-    "featuresCta": "Découvrir ses fonctionnalités",
     "highlight1Title": "Aucun appel réseau",
     "highlight1Description": "Rafeeq n'effectue aucun appel réseau à l'exécution, par conception. Coupez votre réseau : il fonctionne à l'identique.",
     "highlight2Title": "Tout fonctionne sur l'appareil",
@@ -89,7 +86,6 @@
     "bundledName": "Rafeeq (avec modèle de démarrage)",
     "bundledDescription": "Inclut un petit modèle de démarrage (Qwen2.5-0.5B-Instruct) qui s'installe automatiquement au premier lancement. Rien à configurer.",
     "bundledBestFor": "Toute personne sur une machine connectée à Internet qui veut commencer à discuter immédiatement.",
-    "size": "Taille",
     "bestFor": "Idéal pour",
     "downloadButton": "Télécharger pour Windows",
     "footer": "Les versions macOS et Linux arrivent bientôt. Le code source est disponible sur",

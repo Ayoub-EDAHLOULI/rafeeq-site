@@ -4,7 +4,6 @@
     "description": "Rafeeq 是一款完全离线的本地 AI 桌面助手，可用于代码帮助、文档问答和摘要总结——专为隔离网络和受限网络环境设计。"
   },
   "nav": {
-    "home": "首页",
     "features": "功能",
     "download": "下载",
     "docs": "文档",
@@ -24,8 +23,6 @@
     "tagline": "在阿拉伯语中意为「伙伴」",
     "title": "完全离线的 AI 伙伴",
     "subtitle": "Rafeeq 是一款本地 AI 桌面助手，可用于代码帮助、文档问答和摘要总结——专为永不接入公共互联网的设备而生。",
-    "downloadCta": "下载 Rafeeq",
-    "featuresCta": "查看功能",
     "highlight1Title": "零网络调用",
     "highlight1Description": "Rafeeq 在设计和实现上确保运行时不发起任何网络调用。断开网络，它照常运行。",
     "highlight2Title": "完全在本地设备运行",
@@ -89,7 +86,6 @@
     "bundledName": "Rafeeq（含入门模型）",
     "bundledDescription": "内置一个小型入门模型（Qwen2.5-0.5B-Instruct），首次启动时会自动安装，无需任何配置。",
     "bundledBestFor": "适合联网设备上、希望立即开始对话的任何用户。",
-    "size": "大小",
     "bestFor": "适用场景",
     "downloadButton": "下载 Windows 版",
     "footer": "macOS 和 Linux 版本即将推出。源代码可在以下位置获取：",

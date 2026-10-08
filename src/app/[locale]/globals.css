@@ -77,15 +77,6 @@
   --color-dot: var(--dot);
   --color-danger: var(--danger);
 
-  /* Legacy aliases so existing classes pick up the new palette. Removed in
-     the cleanup step once every component uses the names above. */
-  --color-background: var(--bg);
-  --color-card: var(--panel);
-  --color-subtext: var(--muted);
-  --color-primary: var(--accent);
-  --color-border: var(--line);
-  --color-input-bg: var(--panel-2);
-
   /* Plex Arabic first: it only contains Arabic glyphs, so Latin text and
      digits fall through to Hanken Grotesk and Chinese to the system fonts. */
   --font-sans:

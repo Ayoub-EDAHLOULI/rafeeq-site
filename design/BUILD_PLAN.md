@@ -1,6 +1,22 @@
 # Rafeeq website redesign: build plan
 
-Status: proposal. Nothing in `src/` or `messages/` has been changed. Each step below waits for your OK before I implement it.
+Status: **complete** (steps 1–13, plus an extra step 11b). Each step was committed separately.
+
+Decisions made during the build, beyond section 1:
+- Every new string was written into all six locale files in the same step; there is no English fallback (section 6.1).
+- The type scale is one notch smaller than TOKENS.md (section 6.0).
+- IBM Plex Sans Arabic is loaded from local Arabic-subset files (`src/assets/fonts/`), because `next/font/google` declares every subset and ignored `adjustFontFallback: false`.
+- Step 11b added the redesigned app's Knowledge base, Settings and chat search to the site and the assistant.
+
+Still open:
+- Native review of all drafted fr, es, de, ar and zh strings.
+- A dark/light screenshot pair with a short real conversation, to replace the empty-chat pair on Home.
+- The real domain: set `SITE_URL` at build time to enable canonical, hreflang and the sitemap.
+- Minimum RAM: test on an 8 GB machine, then set `minRamGb` in `src/lib/release.ts`.
+- Offline install test on clean Windows 10 (WebView2).
+- Desktop app: "Keep chat history" is saved but not enforced; `DocumentPanel.tsx` says long documents are rejected while the code truncates them; the session panel says context length can be changed on the Models page, but it is fixed at 4096.
+
+The original proposal follows.
 
 This plan is based on `design/README.md`, `design/TOKENS.md`, the four previews in both themes, and the current code at commit `7364c93`. It was also checked against the desktop app source in `rafeeq-desktop` and the live 0.1.0 GitHub release.
 

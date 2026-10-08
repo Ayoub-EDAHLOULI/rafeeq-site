@@ -4,7 +4,6 @@
     "description": "Rafeeq is a fully offline, local AI desktop assistant for code help, document Q&A, and summarization — built for air-gapped and network-restricted machines."
   },
   "nav": {
-    "home": "Home",
     "features": "Features",
     "download": "Download",
     "docs": "Docs",
@@ -24,8 +23,6 @@
     "tagline": "means \"companion\" in Arabic",
     "title": "Your fully offline AI companion",
     "subtitle": "Rafeeq is a local AI desktop assistant for code help, document Q&A, and summarization — built for machines that will never see the open internet.",
-    "downloadCta": "Download Rafeeq",
-    "featuresCta": "See what it can do",
     "highlight1Title": "Zero network calls",
     "highlight1Description": "Rafeeq makes no network calls at runtime, by design and by construction. Block your network and it runs identically.",
     "highlight2Title": "Runs entirely on-device",
@@ -89,7 +86,6 @@
     "bundledName": "Rafeeq (with starter model)",
     "bundledDescription": "Includes a small starter model (Qwen2.5-0.5B-Instruct) that installs automatically on first launch. Nothing to configure.",
     "bundledBestFor": "Anyone on a normal internet-connected machine who wants to start chatting immediately.",
-    "size": "Size",
     "bestFor": "Best for",
     "downloadButton": "Download for Windows",
     "footer": "macOS and Linux builds are on the way. Source is available on",

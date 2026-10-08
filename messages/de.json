@@ -4,7 +4,6 @@
     "description": "Rafeeq ist ein vollständig offline arbeitender, lokaler KI-Desktop-Assistent für Code-Hilfe, Dokumentenfragen und Zusammenfassungen — entwickelt für abgeschottete und netzwerkbeschränkte Rechner."
   },
   "nav": {
-    "home": "Start",
     "features": "Funktionen",
     "download": "Download",
     "docs": "Dokumentation",
@@ -24,8 +23,6 @@
     "tagline": "bedeutet „Begleiter“ auf Arabisch",
     "title": "Dein vollständig offline arbeitender KI-Begleiter",
     "subtitle": "Rafeeq ist ein lokaler KI-Desktop-Assistent für Code-Hilfe, Dokumentenfragen und Zusammenfassungen — entwickelt für Rechner, die niemals mit dem offenen Internet verbunden sind.",
-    "downloadCta": "Rafeeq herunterladen",
-    "featuresCta": "Funktionen ansehen",
     "highlight1Title": "Keine Netzwerkaufrufe",
     "highlight1Description": "Rafeeq führt zur Laufzeit keine Netzwerkaufrufe aus — konstruktionsbedingt. Blockiere dein Netzwerk, und die App läuft unverändert weiter.",
     "highlight2Title": "Läuft vollständig lokal",
@@ -89,7 +86,6 @@
     "bundledName": "Rafeeq (mit Starter-Modell)",
     "bundledDescription": "Enthält ein kleines Starter-Modell (Qwen2.5-0.5B-Instruct), das sich beim ersten Start automatisch installiert. Keine Konfiguration nötig.",
     "bundledBestFor": "Für alle mit einem regulär internetverbundenen Rechner, die sofort loschatten möchten.",
-    "size": "Größe",
     "bestFor": "Geeignet für",
     "downloadButton": "Für Windows herunterladen",
     "footer": "macOS- und Linux-Builds folgen. Der Quellcode ist verfügbar auf",

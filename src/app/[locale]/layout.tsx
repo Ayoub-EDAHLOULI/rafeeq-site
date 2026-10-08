@@ -105,7 +105,7 @@ export default async function LocaleLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
-      <body className="flex min-h-full flex-col bg-background text-text">
+      <body className="flex min-h-full flex-col bg-bg text-text">
         <NextIntlClientProvider>
           <MotionProvider>
             <Nav />
