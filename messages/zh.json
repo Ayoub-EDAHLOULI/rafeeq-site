@@ -91,14 +91,14 @@
   },
   "docs": {
     "title": "快速上手",
-    "step1Title": "1. 安装 Rafeeq",
+    "step1Title": "安装 Rafeeq",
     "step1Description": "从<downloadLink>下载页面</downloadLink>下载适合你平台的安装包。如果不确定该选哪个版本，含入门模型的版本是最简单的上手方式。",
-    "step2Title": "2. 添加模型（仅标准安装包需要）",
+    "step2Title": "添加模型",
     "step2Description": "如果你安装的是标准版本，Rafeeq 需要至少一个 .gguf 模型文件才能开始对话：",
     "step2List1": "前往 huggingface.co，搜索名称中包含 GGUF 的模型。",
-    "step2List2": "下载一个量化文件——例如名称类似 *.Q4_K_M.gguf 的文件，在大小与质量之间有较好的平衡。",
+    "step2List2": "下载一个量化文件——例如名称类似 <code>*.Q4_K_M.gguf</code> 的文件，在大小与质量之间有较好的平衡。",
     "step2List3": "打开 Rafeeq，进入模型页面，点击「打开模型文件夹」，将文件放入其中，然后点击「刷新」。",
-    "step3Title": "3. 开始对话",
+    "step3Title": "开始对话",
     "step3Description": "在模型页面加载一个模型，然后根据你要做的事情选择模式——通用、代码帮助、文档，或 RAG。",
     "ragTitle": "配置本地 RAG",
     "ragDescription": "RAG 模式需要另外一个小型嵌入模型（不是你的对话模型）——例如 nomic-embed-text-v1.5。以与对话模型相同的方式导入它，然后在 RAG 模式中选择它，并为一个文档文件夹建立索引。",
@@ -106,7 +106,12 @@
     "offlineDescription": "Rafeeq 从架构上确保运行时不发起任何网络调用。你可以自行验证：在操作系统层面阻断网络访问（防火墙规则、禁用网卡，或使用隔离虚拟机），Rafeeq 依然会照常运行。应用顶部也会显示离线状态指示器。",
     "moreTitle": "了解更多",
     "moreDescription": "如需从源代码构建的说明及完整技术细节，请参阅",
-    "readmeLink": "GitHub 上的 README"
+    "readmeLink": "GitHub 上的 README",
+    "subtitle": "从安装到第一个回答，只需三步。",
+    "onThisPage": "本页内容",
+    "modelsFolderLabel": "模型文件夹（Windows 标准安装程序）",
+    "modelsFolderHint": "「模型」页面始终会显示你所安装版本的确切路径。若使用附带入门模型的安装程序，文件夹名称以 <code>.bundled</code> 结尾。",
+    "step2Note": "（仅标准安装包需要）"
   },
   "assistant": {
     "open": "询问 Rafeeq 助手",
@@ -128,5 +133,18 @@
     "errorRateLimit": "你发送消息的速度过快。请稍候再试。",
     "errorGeneric": "出现了问题。请重试，或查看文档页面。",
     "errorTooLong": "消息过长。请控制在 800 个字符以内。"
+  },
+  "modes": {
+    "general": "通用",
+    "code": "代码帮助",
+    "document": "文档",
+    "rag": "RAG",
+    "generalDescription": "日常问题。",
+    "codeDescription": "解释并提出建议，从不运行代码。",
+    "documentDescription": "就单个文件提问。",
+    "ragDescription": "就整个文件夹提问。"
+  },
+  "common": {
+    "offlineBadge": "离线 · 无网络调用"
   }
 }

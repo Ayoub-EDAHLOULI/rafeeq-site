@@ -51,6 +51,15 @@ export function CopyIcon(props: IconProps) {
   );
 }
 
+export function ShieldCheckIcon(props: IconProps) {
+  return (
+    <Stroke {...props}>
+      <path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6l8-3z" />
+      <path d="M9 12l2 2 4-4" />
+    </Stroke>
+  );
+}
+
 export function CheckIcon(props: IconProps) {
   return (
     <Stroke {...props}>

@@ -91,14 +91,14 @@
   },
   "docs": {
     "title": "Primeros pasos",
-    "step1Title": "1. Instalar Rafeeq",
+    "step1Title": "Instalar Rafeeq",
     "step1Description": "Descarga el instalador para tu plataforma desde la <downloadLink>página de descargas</downloadLink>. Si no estás seguro de qué variante elegir, la que incluye el modelo inicial es la forma más sencilla de empezar.",
-    "step2Title": "2. Añadir un modelo (solo instalador estándar)",
+    "step2Title": "Añadir un modelo",
     "step2Description": "Si instalaste la versión estándar, Rafeeq necesita al menos un archivo de modelo .gguf para poder chatear:",
     "step2List1": "Ve a huggingface.co y busca un modelo que tenga GGUF en el nombre.",
-    "step2List2": "Descarga un archivo cuantizado — uno con un nombre como *.Q4_K_M.gguf ofrece un buen equilibrio entre tamaño y calidad.",
+    "step2List2": "Descarga un archivo cuantizado — uno con un nombre como <code>*.Q4_K_M.gguf</code> ofrece un buen equilibrio entre tamaño y calidad.",
     "step2List3": "Abre Rafeeq, ve a la pantalla de Modelos y haz clic en Abrir carpeta de modelos. Coloca el archivo allí y haz clic en Actualizar.",
-    "step3Title": "3. Empezar a chatear",
+    "step3Title": "Empezar a chatear",
     "step3Description": "Carga un modelo desde la pantalla de Modelos y elige un modo — General, Ayuda con código, Documento o RAG — según lo que necesites.",
     "ragTitle": "Configurar RAG local",
     "ragDescription": "El modo RAG necesita un segundo modelo pequeño de embeddings (distinto de tu modelo de chat) — por ejemplo nomic-embed-text-v1.5. Instálalo de la misma forma que un modelo de chat, selecciónalo en el modo RAG e indexa una carpeta de documentos.",
@@ -106,7 +106,12 @@
     "offlineDescription": "Rafeeq no realiza ninguna llamada de red en tiempo de ejecución, por construcción. Puedes comprobarlo tú mismo: bloquea el acceso a la red a nivel del sistema operativo (regla de firewall, adaptador desactivado, o una VM aislada) y Rafeeq funcionará igual. La app también muestra un indicador de estado sin conexión en la cabecera.",
     "moreTitle": "Más información",
     "moreDescription": "Para instrucciones de compilación desde el código fuente y todos los detalles técnicos, consulta el",
-    "readmeLink": "README en GitHub"
+    "readmeLink": "README en GitHub",
+    "subtitle": "Del instalador a la primera respuesta, en tres pasos.",
+    "onThisPage": "En esta página",
+    "modelsFolderLabel": "Carpeta de modelos, instalador estándar en Windows",
+    "modelsFolderHint": "La pantalla Modelos siempre muestra la ruta exacta de tu instalación. Con el instalador que incluye el modelo inicial, el nombre de la carpeta termina en <code>.bundled</code>.",
+    "step2Note": "(solo instalador estándar)"
   },
   "assistant": {
     "open": "Preguntar al asistente de Rafeeq",
@@ -128,5 +133,18 @@
     "errorRateLimit": "Estás enviando mensajes demasiado rápido. Espera un momento e inténtalo de nuevo.",
     "errorGeneric": "Algo salió mal. Inténtalo de nuevo o consulta la página Docs.",
     "errorTooLong": "El mensaje es demasiado largo. Mantenlo por debajo de 800 caracteres."
+  },
+  "modes": {
+    "general": "General",
+    "code": "Ayuda con código",
+    "document": "Documento",
+    "rag": "RAG",
+    "generalDescription": "Preguntas cotidianas.",
+    "codeDescription": "Explica y sugiere, nunca ejecuta.",
+    "documentDescription": "Pregunta sobre un archivo.",
+    "ragDescription": "Pregunta sobre una carpeta."
+  },
+  "common": {
+    "offlineBadge": "Sin conexión · ninguna llamada de red"
   }
 }

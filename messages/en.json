@@ -91,14 +91,14 @@
   },
   "docs": {
     "title": "Getting started",
-    "step1Title": "1. Install Rafeeq",
+    "step1Title": "Install Rafeeq",
     "step1Description": "Download the installer for your platform from the <downloadLink>Download page</downloadLink>. If you're not sure which variant to pick, the one with the starter model included is the easiest way to get going.",
-    "step2Title": "2. Add a model (standard installer only)",
+    "step2Title": "Add a model",
     "step2Description": "If you installed the standard build, Rafeeq needs at least one .gguf model file before it can chat:",
     "step2List1": "Go to huggingface.co and search for a model with GGUF in the name.",
-    "step2List2": "Download a quantized file — one named like *.Q4_K_M.gguf is a good balance of size and quality.",
+    "step2List2": "Download a quantized file — one named like <code>*.Q4_K_M.gguf</code> is a good balance of size and quality.",
     "step2List3": "Open Rafeeq, go to the Models screen, and click Open models folder. Drop the file in, then click Refresh.",
-    "step3Title": "3. Start chatting",
+    "step3Title": "Start chatting",
     "step3Description": "Load a model from the Models screen, then pick a mode — General, Code help, Document, or RAG — depending on what you're working on.",
     "ragTitle": "Setting up local RAG",
     "ragDescription": "RAG mode needs a second, small embedding model (not your chat model) — for example nomic-embed-text-v1.5. Sideload it the same way as a chat model, then select it from RAG mode and index a folder of documents.",
@@ -106,7 +106,12 @@
     "offlineDescription": "Rafeeq makes zero network calls at runtime, by construction. You can test this yourself: block network access at the OS level (firewall rule, disabled adapter, or an air-gapped VM) and Rafeeq will run identically. The app also shows an offline status indicator in the header.",
     "moreTitle": "More",
     "moreDescription": "For build-from-source instructions and full technical details, see the",
-    "readmeLink": "README on GitHub"
+    "readmeLink": "README on GitHub",
+    "subtitle": "From installer to first answer, in three steps.",
+    "onThisPage": "On this page",
+    "modelsFolderLabel": "Models folder, standard installer on Windows",
+    "modelsFolderHint": "The Models screen always shows the exact path for your install. With the starter-model installer, the folder name ends in <code>.bundled</code>.",
+    "step2Note": "(standard installer only)"
   },
   "assistant": {
     "open": "Ask the Rafeeq assistant",
@@ -128,5 +133,18 @@
     "errorRateLimit": "You're sending messages too quickly. Please wait a moment and try again.",
     "errorGeneric": "Something went wrong. Please try again, or check the Docs page.",
     "errorTooLong": "That message is too long. Please keep it under 800 characters."
+  },
+  "modes": {
+    "general": "General",
+    "code": "Code help",
+    "document": "Document",
+    "rag": "RAG",
+    "generalDescription": "Everyday questions.",
+    "codeDescription": "Explain and suggest, never run.",
+    "documentDescription": "Ask about one file.",
+    "ragDescription": "Ask about a folder."
+  },
+  "common": {
+    "offlineBadge": "Offline · no network calls"
   }
 }

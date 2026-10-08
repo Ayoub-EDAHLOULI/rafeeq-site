@@ -91,14 +91,14 @@
   },
   "docs": {
     "title": "Erste Schritte",
-    "step1Title": "1. Rafeeq installieren",
+    "step1Title": "Rafeeq installieren",
     "step1Description": "Lade das Installationsprogramm für deine Plattform von der <downloadLink>Download-Seite</downloadLink> herunter. Falls du unsicher bist, welche Variante du wählen sollst: Die Variante mit enthaltenem Starter-Modell ist der einfachste Einstieg.",
-    "step2Title": "2. Ein Modell hinzufügen (nur Standard-Installation)",
+    "step2Title": "Ein Modell hinzufügen",
     "step2Description": "Wenn du die Standardversion installiert hast, benötigt Rafeeq mindestens eine .gguf-Modelldatei, um chatten zu können:",
     "step2List1": "Gehe zu huggingface.co und suche nach einem Modell mit GGUF im Namen.",
-    "step2List2": "Lade eine quantisierte Datei herunter — eine mit einem Namen wie *.Q4_K_M.gguf bietet ein gutes Gleichgewicht zwischen Größe und Qualität.",
+    "step2List2": "Lade eine quantisierte Datei herunter — eine mit einem Namen wie <code>*.Q4_K_M.gguf</code> bietet ein gutes Gleichgewicht zwischen Größe und Qualität.",
     "step2List3": "Öffne Rafeeq, gehe zum Modelle-Bildschirm und klicke auf Modellordner öffnen. Lege die Datei dort ab und klicke dann auf Aktualisieren.",
-    "step3Title": "3. Mit dem Chatten beginnen",
+    "step3Title": "Mit dem Chatten beginnen",
     "step3Description": "Lade ein Modell im Modelle-Bildschirm und wähle dann je nach Aufgabe einen Modus — Allgemein, Code-Hilfe, Dokument oder RAG.",
     "ragTitle": "Lokales RAG einrichten",
     "ragDescription": "Der RAG-Modus benötigt ein zweites, kleines Embedding-Modell (nicht dein Chat-Modell) — zum Beispiel nomic-embed-text-v1.5. Lade es genauso wie ein Chat-Modell nach, wähle es dann im RAG-Modus aus und indexiere einen Ordner mit Dokumenten.",
@@ -106,7 +106,12 @@
     "offlineDescription": "Rafeeq führt zur Laufzeit konstruktionsbedingt keine Netzwerkaufrufe aus. Du kannst das selbst testen: Blockiere den Netzwerkzugriff auf Betriebssystemebene (Firewall-Regel, deaktivierter Netzwerkadapter oder eine abgeschottete VM) — Rafeeq läuft unverändert weiter. Die App zeigt außerdem eine Offline-Statusanzeige in der Kopfzeile.",
     "moreTitle": "Mehr erfahren",
     "moreDescription": "Für Anleitungen zum Bauen aus dem Quellcode und alle technischen Details siehe das",
-    "readmeLink": "README auf GitHub"
+    "readmeLink": "README auf GitHub",
+    "subtitle": "Vom Installer zur ersten Antwort in drei Schritten.",
+    "onThisPage": "Auf dieser Seite",
+    "modelsFolderLabel": "Modellordner, Standard-Installer unter Windows",
+    "modelsFolderHint": "Der Modelle-Bildschirm zeigt immer den genauen Pfad deiner Installation. Beim Installer mit Startmodell endet der Ordnername auf <code>.bundled</code>.",
+    "step2Note": "(nur Standard-Installation)"
   },
   "assistant": {
     "open": "Den Rafeeq-Assistenten fragen",
@@ -128,5 +133,18 @@
     "errorRateLimit": "Sie senden Nachrichten zu schnell. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
     "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder sehen Sie auf der Docs-Seite nach.",
     "errorTooLong": "Die Nachricht ist zu lang. Bitte bleiben Sie unter 800 Zeichen."
+  },
+  "modes": {
+    "general": "Allgemein",
+    "code": "Code-Hilfe",
+    "document": "Dokument",
+    "rag": "RAG",
+    "generalDescription": "Alltägliche Fragen.",
+    "codeDescription": "Erklärt und schlägt vor, führt nie aus.",
+    "documentDescription": "Fragen zu einer Datei.",
+    "ragDescription": "Fragen zu einem Ordner."
+  },
+  "common": {
+    "offlineBadge": "Offline · keine Netzwerkzugriffe"
   }
 }

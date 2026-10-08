@@ -91,14 +91,14 @@
   },
   "docs": {
     "title": "Prise en main",
-    "step1Title": "1. Installer Rafeeq",
+    "step1Title": "Installer Rafeeq",
     "step1Description": "Téléchargez l'installateur pour votre plateforme depuis la <downloadLink>page de téléchargement</downloadLink>. Si vous hésitez, la version avec modèle de démarrage inclus est la plus simple pour commencer.",
-    "step2Title": "2. Ajouter un modèle (installateur standard uniquement)",
+    "step2Title": "Ajouter un modèle",
     "step2Description": "Si vous avez installé la version standard, Rafeeq a besoin d'au moins un fichier de modèle .gguf pour pouvoir discuter :",
     "step2List1": "Allez sur huggingface.co et recherchez un modèle contenant GGUF dans son nom.",
-    "step2List2": "Téléchargez un fichier quantifié — un nom comme *.Q4_K_M.gguf offre un bon équilibre entre taille et qualité.",
+    "step2List2": "Téléchargez un fichier quantifié — un nom comme <code>*.Q4_K_M.gguf</code> offre un bon équilibre entre taille et qualité.",
     "step2List3": "Ouvrez Rafeeq, allez sur l'écran Modèles, et cliquez sur Ouvrir le dossier des modèles. Déposez-y le fichier, puis cliquez sur Actualiser.",
-    "step3Title": "3. Commencer à discuter",
+    "step3Title": "Commencer à discuter",
     "step3Description": "Chargez un modèle depuis l'écran Modèles, puis choisissez un mode — Général, Aide au code, Document ou RAG — selon ce que vous faites.",
     "ragTitle": "Configurer le RAG local",
     "ragDescription": "Le mode RAG nécessite un second petit modèle d'embedding (différent de votre modèle de chat) — par exemple nomic-embed-text-v1.5. Installez-le de la même façon qu'un modèle de chat, puis sélectionnez-le dans le mode RAG et indexez un dossier de documents.",
@@ -106,7 +106,12 @@
     "offlineDescription": "Rafeeq n'effectue aucun appel réseau à l'exécution, par construction. Vous pouvez le vérifier vous-même : bloquez l'accès réseau au niveau du système (pare-feu, adaptateur désactivé, ou VM isolée) et Rafeeq fonctionnera à l'identique. L'application affiche aussi un indicateur de statut hors ligne dans l'en-tête.",
     "moreTitle": "Pour aller plus loin",
     "moreDescription": "Pour les instructions de compilation depuis les sources et tous les détails techniques, consultez le",
-    "readmeLink": "README sur GitHub"
+    "readmeLink": "README sur GitHub",
+    "subtitle": "De l'installation à la première réponse, en trois étapes.",
+    "onThisPage": "Sur cette page",
+    "modelsFolderLabel": "Dossier des modèles, installateur standard sous Windows",
+    "modelsFolderHint": "L'écran Modèles affiche toujours le chemin exact de votre installation. Avec l'installateur incluant le modèle de démarrage, le nom du dossier se termine par <code>.bundled</code>.",
+    "step2Note": "(installateur standard uniquement)"
   },
   "assistant": {
     "open": "Poser une question à l'assistant Rafeeq",
@@ -128,5 +133,18 @@
     "errorRateLimit": "Vous envoyez des messages trop rapidement. Patientez un instant puis réessayez.",
     "errorGeneric": "Une erreur s'est produite. Réessayez ou consultez la page Docs.",
     "errorTooLong": "Ce message est trop long. Limitez-le à 800 caractères."
+  },
+  "modes": {
+    "general": "Général",
+    "code": "Aide au code",
+    "document": "Document",
+    "rag": "RAG",
+    "generalDescription": "Questions du quotidien.",
+    "codeDescription": "Explique et suggère, sans jamais exécuter.",
+    "documentDescription": "Questions sur un fichier.",
+    "ragDescription": "Questions sur un dossier."
+  },
+  "common": {
+    "offlineBadge": "Hors ligne · aucun appel réseau"
   }
 }

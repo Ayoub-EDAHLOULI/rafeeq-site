@@ -210,15 +210,17 @@ export function StaggerItem({
 /** Standalone entrance for a single block when it scrolls into view. */
 export function Reveal({
   as = "div",
+  id,
   className,
   children,
   effect = "rise",
   from = "start",
   delay = 0,
-}: BaseProps & EffectProps & { delay?: number }) {
+}: BaseProps & EffectProps & { delay?: number; id?: string }) {
   const Component = tags[as] as typeof m.div;
   return (
     <Component
+      id={id}
       className={className}
       initial="hidden"
       whileInView="show"

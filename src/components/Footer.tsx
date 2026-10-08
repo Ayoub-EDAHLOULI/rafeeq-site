@@ -2,13 +2,10 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Container from "./ui/Container";
 import Logo from "./ui/Logo";
+import SmallLabel from "./ui/SmallLabel";
 
 const GITHUB_URL = "https://github.com/Ayoub-EDAHLOULI/Rafeeq";
 
-// Letter spacing breaks the joins between Arabic letters, so labels drop it
-// in RTL. Uppercase has no effect on Arabic or Chinese.
-const LABEL =
-  "text-xs font-semibold uppercase tracking-[0.08em] text-faint rtl:tracking-normal";
 const LINK = "flex min-h-11 items-center text-muted transition-colors hover:text-text";
 
 export default function Footer() {
@@ -24,9 +21,7 @@ export default function Footer() {
         </div>
 
         <nav aria-labelledby="footer-product" className="flex-[1_1_140px]">
-          <p id="footer-product" className={LABEL}>
-            {t("product")}
-          </p>
+          <SmallLabel id="footer-product">{t("product")}</SmallLabel>
           <ul className="mt-2">
             <li>
               <Link href="/features" className={LINK}>
@@ -47,9 +42,7 @@ export default function Footer() {
         </nav>
 
         <nav aria-labelledby="footer-project" className="flex-[1_1_140px]">
-          <p id="footer-project" className={LABEL}>
-            {t("project")}
-          </p>
+          <SmallLabel id="footer-project">{t("project")}</SmallLabel>
           <ul className="mt-2">
             <li>
               <a href={GITHUB_URL} className={LINK}>

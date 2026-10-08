@@ -9,16 +9,13 @@ import {
 } from "@/components/motion/Reveal";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
+import SmallLabel from "@/components/ui/SmallLabel";
 import Button from "@/components/ui/Button";
 import CopyButton from "@/components/ui/CopyButton";
 import { WindowsIcon } from "@/components/ui/icons";
 import { RELEASE, formatSize } from "@/lib/release";
 
 const GITHUB_URL = "https://github.com/Ayoub-EDAHLOULI/Rafeeq";
-
-// Small uppercase label; no letter spacing in RTL (it breaks Arabic joins).
-const SMALL_LABEL =
-  "text-xs font-semibold uppercase tracking-[0.08em] text-faint rtl:tracking-normal";
 
 export async function generateMetadata({
   params,
@@ -116,7 +113,7 @@ export default function DownloadPage() {
               </div>
               <p className="text-muted">{installer.description}</p>
               <div className="rounded-xl border border-line bg-bg px-4 py-3.5">
-                <p className={SMALL_LABEL}>{t("bestFor")}</p>
+                <SmallLabel>{t("bestFor")}</SmallLabel>
                 <p className="mt-1 text-text">{installer.bestFor}</p>
               </div>
               <Press className="mt-auto self-start">
