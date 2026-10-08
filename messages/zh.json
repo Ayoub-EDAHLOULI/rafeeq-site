@@ -21,7 +21,7 @@
     "project": "项目"
   },
   "home": {
-    "tagline": "رفيق — 阿拉伯语中意为「伙伴」",
+    "tagline": "在阿拉伯语中意为「伙伴」",
     "title": "完全离线的 AI 伙伴",
     "subtitle": "Rafeeq 是一款本地 AI 桌面助手，可用于代码帮助、文档问答和摘要总结——专为永不接入公共互联网的设备而生。",
     "downloadCta": "下载 Rafeeq",
@@ -33,7 +33,10 @@
     "highlight3Title": "专为受限设备打造",
     "highlight3Description": "企业虚拟机、隔离网络、受监管行业——在云端 AI 工具无法使用的地方，Rafeeq 依然可用。",
     "bannerTitle": "无需 API 密钥，无云端调用，无遥测数据。",
-    "bannerSubtitle": "模型、运行环境和你的数据永远不会离开这台设备——这是可验证的事实，而非空口承诺。"
+    "bannerSubtitle": "模型、运行环境和你的数据永远不会离开这台设备——这是可验证的事实，而非空口承诺。",
+    "caption": "安装程序 {size} · MIT 许可 · macOS 和 Linux 版本即将推出",
+    "ctaTitle": "让没有网络的电脑也用上 Rafeeq。",
+    "ctaBody": "安装后，通过 U 盘或文件共享拷贝一个模型文件，即可开始对话。"
   },
   "features": {
     "title": "Rafeeq 的全部功能",

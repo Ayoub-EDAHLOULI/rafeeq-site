@@ -21,7 +21,7 @@
     "project": "Project"
   },
   "home": {
-    "tagline": "رفيق — \"companion\" in Arabic",
+    "tagline": "means \"companion\" in Arabic",
     "title": "Your fully offline AI companion",
     "subtitle": "Rafeeq is a local AI desktop assistant for code help, document Q&A, and summarization — built for machines that will never see the open internet.",
     "downloadCta": "Download Rafeeq",
@@ -33,7 +33,10 @@
     "highlight3Title": "Built for restricted machines",
     "highlight3Description": "Corporate VMs, air-gapped networks, regulated industries — Rafeeq works where cloud AI tools can't.",
     "bannerTitle": "No API keys. No cloud calls. No telemetry.",
-    "bannerSubtitle": "The model, the runtime, and your data never leave the machine — verifiably, not just by policy."
+    "bannerSubtitle": "The model, the runtime, and your data never leave the machine — verifiably, not just by policy.",
+    "caption": "{size} installer · MIT licensed · macOS and Linux on the way",
+    "ctaTitle": "Get Rafeeq on a machine that has no internet.",
+    "ctaBody": "Install it, copy a model file over by USB or file share, and start chatting."
   },
   "features": {
     "title": "Everything Rafeeq can do",

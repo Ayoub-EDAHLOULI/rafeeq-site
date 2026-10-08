@@ -16,9 +16,9 @@ type Particle = {
   hover: number;
 };
 
-const AREA_PER_PARTICLE = 14000;
-const MAX_PARTICLES = 110;
-const MAX_PARTICLES_SMALL = 30;
+const AREA_PER_PARTICLE = 20000;
+const MAX_PARTICLES = 70;
+const MAX_PARTICLES_SMALL = 20;
 const SMALL_BREAKPOINT = 640;
 const MAX_DPR = 2;
 const DRIFT_SPEED = 0.25;
@@ -33,13 +33,13 @@ const DAMPING = 0.04;
 const MAX_SPEED = 3;
 const DOT_RADIUS = 2;
 const DOT_RADIUS_VARIATION = 0.5;
-const DOT_ALPHA = 0.6;
-const LINK_ALPHA = 0.4;
+const DOT_ALPHA = 0.45;
+const LINK_ALPHA = 0.25;
 // Extra alpha for dots and lines inside the pull radius, plus a soft halo.
 const HOVER_DOT_BOOST = 0.4;
 const HOVER_LINK_BOOST = 0.35;
 const HOVER_EASE = 0.12;
-const GLOW_ALPHA = 0.18;
+const GLOW_ALPHA = 0.12;
 const GLOW_SCALE = 3.5;
 // Radial fade: particles behind the hero text keep CENTER_ALPHA of their
 // strength, ramping to full between FADE_INNER and FADE_OUTER (in units of
@@ -67,7 +67,7 @@ function bucketFor(buckets: number[][], alpha: number) {
 
 // Secondary layer of smaller "dust" dots (no lines) for depth. Linear cost:
 // they are moved and drawn but never paired.
-const DUST_RATIO = 0.5;
+const DUST_RATIO = 0.3;
 const DUST_RADIUS = 1;
 const DUST_RADIUS_VARIATION = 1.2;
 const DUST_ALPHA = 0.5;

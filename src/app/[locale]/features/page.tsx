@@ -46,7 +46,12 @@ const ROWS: Feature[][] = [
   ],
   [
     { key: "session", icon: <ClockIcon size={22} />, basis: "wide" },
-    { key: "offline", icon: <ShieldCheckIcon size={22} />, basis: "wide", highlight: true },
+    {
+      key: "offline",
+      icon: <ShieldCheckIcon size={22} />,
+      basis: "wide",
+      highlight: true,
+    },
   ],
 ];
 
@@ -60,7 +65,6 @@ export default function FeaturesPage() {
     body: t(`good${n}Body`),
   }));
 
-
   return (
     <>
       <Container className="pt-22 pb-14">
@@ -71,14 +75,14 @@ export default function FeaturesPage() {
           <StaggerItem
             as="h1"
             effect="focus"
-            className="mt-3.5 max-w-[760px] text-page font-semibold text-text"
+            className="mt-3.5 max-w-190 text-page font-semibold text-text"
           >
             {t("title")}
           </StaggerItem>
           <StaggerItem
             as="p"
             effect="focus"
-            className="mt-4 max-w-[600px] text-lead text-muted"
+            className="mt-4 max-w-150 text-lead text-muted"
           >
             {t("subtitle")}
           </StaggerItem>
@@ -92,7 +96,8 @@ export default function FeaturesPage() {
               {row.map((feature, i) => {
                 // Alternate the slide direction across all seven cards.
                 const position =
-                  ROWS.slice(0, r).reduce((sum, prev) => sum + prev.length, 0) + i;
+                  ROWS.slice(0, r).reduce((sum, prev) => sum + prev.length, 0) +
+                  i;
                 const from = position % 2 === 0 ? "start" : "end";
                 return (
                   <StaggerItem
@@ -100,7 +105,9 @@ export default function FeaturesPage() {
                     effect="slide"
                     from={from}
                     className={`min-w-0 rounded-[18px] border bg-panel p-7 ${
-                      feature.basis === "wide" ? "flex-[1_1_440px]" : "flex-[1_1_300px]"
+                      feature.basis === "wide"
+                        ? "flex-[1_1_440px]"
+                        : "flex-[1_1_300px]"
                     } ${feature.highlight ? "border-accent" : "border-line"}`}
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-panel-2 text-accent-fg">
@@ -130,7 +137,10 @@ export default function FeaturesPage() {
           </Reveal>
           <ul className="flex min-w-0 flex-[2_1_460px] flex-col">
             {goodToKnow.map((item) => (
-              <li key={item.n} className="border-t border-line py-5 last:border-b">
+              <li
+                key={item.n}
+                className="border-t border-line py-5 last:border-b"
+              >
                 <p className="font-semibold text-text">{item.title}</p>
                 <p className="mt-1.5 text-muted">{item.body}</p>
               </li>

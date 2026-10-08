@@ -21,7 +21,7 @@
     "project": "Projekt"
   },
   "home": {
-    "tagline": "رفيق — „Begleiter“ auf Arabisch",
+    "tagline": "bedeutet „Begleiter“ auf Arabisch",
     "title": "Dein vollständig offline arbeitender KI-Begleiter",
     "subtitle": "Rafeeq ist ein lokaler KI-Desktop-Assistent für Code-Hilfe, Dokumentenfragen und Zusammenfassungen — entwickelt für Rechner, die niemals mit dem offenen Internet verbunden sind.",
     "downloadCta": "Rafeeq herunterladen",
@@ -33,7 +33,10 @@
     "highlight3Title": "Für eingeschränkte Rechner gebaut",
     "highlight3Description": "Firmen-VMs, abgeschottete Netzwerke, regulierte Branchen — Rafeeq funktioniert dort, wo Cloud-KI-Tools nicht können.",
     "bannerTitle": "Keine API-Schlüssel. Keine Cloud-Aufrufe. Keine Telemetrie.",
-    "bannerSubtitle": "Modell, Laufzeitumgebung und deine Daten verlassen niemals den Rechner — nachweisbar, nicht nur versprochen."
+    "bannerSubtitle": "Modell, Laufzeitumgebung und deine Daten verlassen niemals den Rechner — nachweisbar, nicht nur versprochen.",
+    "caption": "{size} Installer · MIT-lizenziert · macOS und Linux folgen",
+    "ctaTitle": "Bring Rafeeq auf einen Rechner ohne Internet.",
+    "ctaBody": "Installiere es, kopiere eine Modelldatei per USB-Stick oder Dateifreigabe und fang an zu chatten."
   },
   "features": {
     "title": "Alles, was Rafeeq kann",

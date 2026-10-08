@@ -21,7 +21,7 @@
     "project": "Projet"
   },
   "home": {
-    "tagline": "رفيق — « compagnon » en arabe",
+    "tagline": "signifie « compagnon » en arabe",
     "title": "Votre compagnon IA entièrement hors ligne",
     "subtitle": "Rafeeq est un assistant IA de bureau local pour l'aide au code, les questions sur vos documents et le résumé — conçu pour les machines qui ne verront jamais Internet.",
     "downloadCta": "Télécharger Rafeeq",
@@ -33,7 +33,10 @@
     "highlight3Title": "Conçu pour les machines restreintes",
     "highlight3Description": "VM d'entreprise, réseaux isolés, secteurs réglementés — Rafeeq fonctionne là où les outils IA cloud ne peuvent pas.",
     "bannerTitle": "Aucune clé API. Aucun appel cloud. Aucune télémétrie.",
-    "bannerSubtitle": "Le modèle, le moteur d'exécution et vos données ne quittent jamais la machine — vérifiable, pas seulement promis."
+    "bannerSubtitle": "Le modèle, le moteur d'exécution et vos données ne quittent jamais la machine — vérifiable, pas seulement promis.",
+    "caption": "Installateur de {size} · Licence MIT · macOS et Linux bientôt disponibles",
+    "ctaTitle": "Installez Rafeeq sur une machine sans internet.",
+    "ctaBody": "Installez-le, copiez un fichier de modèle par clé USB ou partage de fichiers, et commencez à discuter."
   },
   "features": {
     "title": "Tout ce que Rafeeq peut faire",

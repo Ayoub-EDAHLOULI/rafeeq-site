@@ -1,100 +1,105 @@
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import ParticleField from "@/components/ParticleField";
 import {
   AnimatedWords,
   Press,
+  Reveal,
   Stagger,
   StaggerItem,
 } from "@/components/motion/Reveal";
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+import { WindowsIcon } from "@/components/ui/icons";
+import CtaBox from "@/components/CtaBox";
+import { RELEASE, formatSize } from "@/lib/release";
 
 export default function HomePage() {
   const t = useTranslations("home");
+  const download = useTranslations("download");
+  const cta = useTranslations("cta");
+  const locale = useLocale();
 
-  const highlights = [
-    { title: t("highlight1Title"), description: t("highlight1Description") },
-    { title: t("highlight2Title"), description: t("highlight2Description") },
-    { title: t("highlight3Title"), description: t("highlight3Description") },
-  ];
+  const pillars = [1, 2, 3].map((n) => ({
+    n,
+    title: t(`highlight${n}Title`),
+    description: t(`highlight${n}Description`),
+  }));
 
   return (
-    <div>
+    <>
+      {/* The particle canvas covers the hero only (decision D2). */}
       <div className="relative isolate overflow-hidden">
         <ParticleField />
-        <section
-          data-particle-focus
-          className="relative mx-auto max-w-5xl px-6 pb-16 pt-20 text-center sm:pt-28"
-        >
-          <Stagger trigger="mount" interval={0.18}>
-            <StaggerItem as="p" className="mb-4 text-sm font-medium text-accent-fg">
-              {t("tagline")}
-            </StaggerItem>
-            <AnimatedWords
-              text={t("title")}
-              className="text-4xl font-semibold tracking-tight text-text sm:text-5xl"
-            />
-            <StaggerItem
-              as="p"
-              className="mx-auto mt-5 max-w-2xl text-lg text-subtext"
-            >
-              {t("subtitle")}
-            </StaggerItem>
-            <StaggerItem className="mt-8 flex items-center justify-center gap-3">
-              <Press>
-                <Link
-                  href="/download"
-                  className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-on-accent transition-opacity hover:opacity-90"
-                >
-                  {t("downloadCta")}
-                </Link>
-              </Press>
-              <Press>
-                <Link
-                  href="/features"
-                  className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-text transition-colors hover:bg-input-bg"
-                >
-                  {t("featuresCta")}
-                </Link>
-              </Press>
-            </StaggerItem>
-          </Stagger>
-        </section>
-
-        <section className="relative mx-auto max-w-5xl px-6 pb-24">
-          <Stagger className="grid gap-6 sm:grid-cols-3">
-            {highlights.map((item) => (
-              <StaggerItem
-                key={item.title}
-                effect="scale"
-                hover
-                className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
-              >
-                <h3 className="font-medium text-text">{item.title}</h3>
-                <p className="mt-2 text-sm text-subtext">{item.description}</p>
+        <section data-particle-focus className="relative">
+          <Container className="pt-24 pb-16 text-center">
+            <Stagger trigger="mount" interval={0.18} className="flex flex-col items-center">
+              {/* On the Arabic page the tagline is "· Rafeeq" (decision D13). */}
+              <StaggerItem className="flex flex-wrap items-center justify-center gap-2.5 font-medium">
+                <span lang="ar" dir="rtl" className="text-xl text-accent-fg">
+                  رفيق
+                </span>
+                <span className="text-muted">{t("tagline")}</span>
               </StaggerItem>
-            ))}
-          </Stagger>
+              <AnimatedWords
+                text={t("title")}
+                className="mt-5 max-w-[860px] text-hero font-semibold text-text"
+              />
+              <StaggerItem as="p" className="mt-6 max-w-[640px] text-lead text-muted">
+                {t("subtitle")}
+              </StaggerItem>
+              <StaggerItem className="mt-9 flex flex-wrap justify-center gap-3">
+                <Press>
+                  <Button href="/download">
+                    <WindowsIcon />
+                    {download("downloadButton")}
+                  </Button>
+                </Press>
+                <Press>
+                  <Button href="/docs" variant="secondary">
+                    {cta("docs")}
+                  </Button>
+                </Press>
+              </StaggerItem>
+              <StaggerItem as="p" className="mt-4.5 font-mono text-[13px] text-faint">
+                {t("caption", {
+                  size: formatSize(RELEASE.standard.exe.bytes, locale),
+                })}
+              </StaggerItem>
+            </Stagger>
+          </Container>
         </section>
       </div>
 
-      <section className="border-t border-border bg-card">
-        <Stagger className="mx-auto max-w-5xl px-6 py-20 text-center">
-          <StaggerItem
-            as="h2"
-            effect="focus"
-            className="text-2xl font-semibold tracking-tight text-text"
-          >
-            {t("bannerTitle")}
-          </StaggerItem>
-          <StaggerItem
-            as="p"
-            effect="focus"
-            className="mx-auto mt-3 max-w-xl text-subtext"
-          >
-            {t("bannerSubtitle")}
-          </StaggerItem>
-        </Stagger>
+      <section className="border-y border-line bg-panel">
+        <Container className="py-20">
+          <Reveal>
+            <h2 className="max-w-[760px] text-section font-semibold text-text">
+              {t("bannerTitle")}
+            </h2>
+            <p className="mt-4 max-w-[640px] text-lead text-muted">
+              {t("bannerSubtitle")}
+            </p>
+          </Reveal>
+          <Stagger className="mt-12 flex flex-wrap gap-5">
+            {pillars.map((pillar) => (
+              <StaggerItem
+                key={pillar.n}
+                className="min-w-0 flex-[1_1_280px] border-t border-line pt-5"
+              >
+                <p className="font-mono text-[13px] text-accent-fg">
+                  {String(pillar.n).padStart(2, "0")}
+                </p>
+                <h3 className="mt-2.5 text-lg font-semibold text-text">
+                  {pillar.title}
+                </h3>
+                <p className="mt-2 text-muted">{pillar.description}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Container>
       </section>
-    </div>
+
+      <CtaBox title={t("ctaTitle")} body={t("ctaBody")} />
+    </>
   );
 }

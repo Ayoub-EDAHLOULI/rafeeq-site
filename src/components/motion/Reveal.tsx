@@ -107,12 +107,13 @@ function useEffectVariants(effect: Effect, side: Side, delay = 0) {
   return effectVariants(effect, side, rtl, delay);
 }
 
+// No blur on words: the hero title is the page's largest paint, and a blur
+// filter only delays it.
 const word: Variants = {
-  hidden: { opacity: 0, y: "0.4em", filter: "blur(10px)" },
+  hidden: { opacity: 0, y: "0.4em" },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: { duration: 1, ease: EASE },
   },
 };
