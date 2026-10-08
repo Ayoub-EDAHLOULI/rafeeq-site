@@ -57,7 +57,7 @@ function TypingDots({ label }: { label: string }) {
         <m.span
           key={i}
           aria-hidden
-          className="h-1.5 w-1.5 rounded-full bg-subtext"
+          className="h-1.5 w-1.5 rounded-full bg-muted"
           animate={{ opacity: [0.3, 1, 0.3], y: [0, -2, 0] }}
           transition={{ duration: 1, repeat: Infinity, delay: i * 0.15 }}
         />
@@ -182,9 +182,9 @@ export default function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.97 }}
             transition={{ duration: 0.35, ease: EASE }}
-            className="fixed inset-x-4 bottom-24 z-50 flex h-[min(560px,calc(100dvh-8rem))] origin-bottom-right flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl sm:inset-x-auto sm:inset-e-6 sm:w-95 rtl:origin-bottom-left"
+            className="fixed inset-x-4 bottom-24 z-50 flex h-[min(560px,calc(100dvh-8rem))] origin-bottom-right flex-col overflow-hidden rounded-[18px] border border-line bg-panel shadow-2xl sm:inset-x-auto sm:inset-e-6 sm:w-95 rtl:origin-bottom-left"
           >
-            <header className="flex items-center gap-3 border-b border-border px-4 py-3">
+            <header className="flex items-center gap-3 border-b border-line px-4 py-3">
               <Image
                 src={logo}
                 alt=""
@@ -194,13 +194,13 @@ export default function ChatWidget() {
               />
               <div className="min-w-0 flex-1">
                 <p className="text-sm font-semibold text-text">{t("title")}</p>
-                <p className="truncate text-xs text-subtext">{t("subtitle")}</p>
+                <p className="truncate text-xs text-muted">{t("subtitle")}</p>
               </div>
               <button
                 type="button"
                 onClick={close}
                 aria-label={t("close")}
-                className="flex h-8 w-8 items-center justify-center rounded-md text-subtext transition-colors hover:bg-input-bg hover:text-text"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-muted transition-colors hover:bg-panel-2 hover:text-text"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                   <path
@@ -220,7 +220,7 @@ export default function ChatWidget() {
               aria-busy={streaming}
               className="flex-1 space-y-3 overflow-y-auto px-4 py-4"
             >
-              <div className="max-w-[85%] rounded-2xl rounded-ss-sm bg-input-bg px-3.5 py-2.5 text-sm leading-relaxed text-text">
+              <div className="max-w-[85%] rounded-2xl rounded-ss-sm bg-panel-2 px-3.5 py-2.5 text-sm leading-relaxed text-text">
                 {t("welcome")}
               </div>
 
@@ -231,7 +231,7 @@ export default function ChatWidget() {
                       key={s}
                       type="button"
                       onClick={() => send(s)}
-                      className="rounded-full border border-border px-3 py-1.5 text-start text-xs text-text transition-colors hover:border-primary/50 hover:bg-input-bg"
+                      className="min-h-11 rounded-full border border-line px-3.5 py-2 text-start text-sm text-text transition-colors hover:border-accent hover:bg-panel-2"
                     >
                       {s}
                     </button>
@@ -247,8 +247,8 @@ export default function ChatWidget() {
                   transition={{ duration: 0.3, ease: EASE }}
                   className={
                     msg.role === "user"
-                      ? "ms-auto max-w-[85%] rounded-2xl rounded-se-sm bg-primary px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-on-accent"
-                      : "max-w-[85%] rounded-2xl rounded-ss-sm bg-input-bg px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-text"
+                      ? "ms-auto max-w-[85%] rounded-2xl rounded-se-sm bg-accent px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-on-accent"
+                      : "max-w-[85%] rounded-2xl rounded-ss-sm bg-panel-2 px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-line wrap-break-word text-text"
                   }
                 >
                   <span className="sr-only">
@@ -276,7 +276,7 @@ export default function ChatWidget() {
 
             <form
               onSubmit={onSubmit}
-              className="border-t border-border px-3 pt-3 pb-2"
+              className="border-t border-line px-3 pt-3 pb-2"
             >
               <div className="flex items-center gap-2">
                 <input
@@ -286,13 +286,13 @@ export default function ChatWidget() {
                   maxLength={MAX_CHARS}
                   placeholder={t("placeholder")}
                   aria-label={t("placeholder")}
-                  className="min-w-0 flex-1 rounded-lg border border-border bg-background px-3 py-2 text-sm text-text placeholder:text-subtext focus:border-primary focus:outline-none"
+                  className="h-11 min-w-0 flex-1 rounded-[10px] border border-line-strong bg-bg px-3 text-sm text-text placeholder:text-muted"
                 />
                 {streaming ? (
                   <button
                     type="button"
                     onClick={() => abortRef.current?.abort()}
-                    className="rounded-lg border border-border px-3 py-2 text-sm font-medium text-text transition-colors hover:bg-input-bg"
+                    className="h-11 rounded-[10px] border border-line px-4 text-sm font-medium text-text transition-colors hover:bg-panel-2"
                   >
                     {t("stop")}
                   </button>
@@ -300,13 +300,13 @@ export default function ChatWidget() {
                   <button
                     type="submit"
                     disabled={!input.trim()}
-                    className="rounded-lg bg-primary px-3 py-2 text-sm font-medium text-on-accent transition-opacity hover:opacity-90 disabled:opacity-40"
+                    className="h-11 rounded-[10px] bg-accent px-4 text-sm font-semibold text-on-accent transition-colors hover:bg-accent/90 disabled:opacity-40"
                   >
                     {t("send")}
                   </button>
                 )}
               </div>
-              <p className="mt-2 px-1 text-[11px] leading-snug text-subtext">
+              <p className="mt-2 px-1 text-xs leading-snug text-muted">
                 {t("disclaimer")}
               </p>
             </form>
@@ -327,7 +327,7 @@ export default function ChatWidget() {
         whileHover={{ y: -3 }}
         whileTap={{ scale: 0.94 }}
         transition={SPRING}
-        className="fixed inset-e-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card shadow-lg"
+        className="fixed inset-e-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-line bg-panel shadow-lg"
       >
         <AnimatePresence mode="wait" initial={false}>
           {open ? (

@@ -49,19 +49,21 @@ export function CodeHelpVisual() {
   );
 }
 
-// Names follow the app's model list: file name without the quantization,
-// dashes shown as spaces.
+// Mirrors the app's Models screen (screenshots of the redesigned app): name
+// as the app shows it, type label, file name, quantization and size on disk.
 const MODELS = [
   {
-    name: "Phi 4 mini instruct",
-    file: "Phi-4-mini-instruct-Q4_K_M.gguf",
-    size: "2.3 GB",
+    name: "qwen2.5 0.5b instruct",
+    type: "Chat",
+    file: "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    size: "469 MB",
     loaded: true,
   },
   {
     name: "nomic embed text v1.5",
+    type: "Embedding",
     file: "nomic-embed-text-v1.5.Q4_K_M.gguf",
-    size: null,
+    size: "80 MB",
     loaded: false,
   },
 ];
@@ -69,13 +71,9 @@ const MODELS = [
 export function ModelManagerVisual() {
   return (
     <div aria-hidden dir="ltr" className={`${CARD} gap-3`}>
-      <div className="flex flex-wrap items-center gap-2.5">
-        <span className="text-xs font-semibold tracking-[0.08em] text-faint uppercase">
-          Profile
-        </span>
-        <span className="rounded-full border border-accent bg-panel-2 px-3.5 py-1.5 text-sm font-medium text-accent-fg">
-          work-vm
-        </span>
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <span className="font-semibold">Models</span>
+        <span className="text-sm text-muted">2 models · 0.54 GB on disk</span>
       </div>
       {MODELS.map((model) => (
         <div
@@ -87,8 +85,11 @@ export function ModelManagerVisual() {
           <div className="min-w-0 flex-[1_1_200px]">
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-semibold">{model.name}</span>
+              <span className="rounded-md bg-panel-2 px-2 py-0.5 text-xs text-muted">
+                {model.type}
+              </span>
               {model.loaded && (
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-panel-2 px-2.5 py-0.5 text-xs font-semibold text-accent-fg">
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent-fg">
                   <span className="h-1.5 w-1.5 rounded-full bg-dot" />
                   Loaded
                 </span>
@@ -97,9 +98,7 @@ export function ModelManagerVisual() {
             <div className="truncate font-mono text-xs text-faint">{model.file}</div>
           </div>
           <span className={CHIP}>Q4_K_M</span>
-          {model.size && (
-            <span className="font-mono text-[13px] text-muted">{model.size}</span>
-          )}
+          <span className="font-mono text-[13px] text-muted">{model.size}</span>
         </div>
       ))}
     </div>

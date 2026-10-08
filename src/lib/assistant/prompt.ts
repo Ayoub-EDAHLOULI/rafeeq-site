@@ -19,15 +19,18 @@ FEATURES
 - Local chat: streamed answers from a quantized model running on CPU, with a Stop button. No account, no rate limits. Answers render code in formatted code blocks.
 - Code help: paste code, ask questions, get explanations or fixes. Rafeeq never executes code and cannot access files on its own.
 - Document Q&A and summarization: open a local .txt, .md, .docx or .pdf file. Only the first part of a long document fits (about 3,000 tokens, roughly 2,000 words); the app says when a document was truncated. .docx import keeps the text only (no images or table layout). Scanned, image-only PDFs are not supported yet; OCR is planned.
-- Local RAG: index a folder (including subfolders) of .txt, .md, .docx and .pdf files with a separate small embedding model, then ask questions; Rafeeq retrieves the 5 most relevant passages and cites the source file. Indexes are saved locally and can be deleted.
+- Local RAG: on the Knowledge base page, choose an embedding model and add folders (including subfolders) of .txt, .md, .docx and .pdf files. Indexing runs in the background and can be paused and resumed; folders can be renamed and deleted. Then ask questions in RAG mode: Rafeeq retrieves the most relevant passages (5 by default) and each answer lists the files and passages it used. If no passage passes the relevance threshold, Rafeeq says nothing relevant was found and offers to rephrase, open the Knowledge base, or answer without the documents.
+- Knowledge base settings: chunk size (default 300 tokens, 100-1000), overlap (default 50, 0-200), passages per question (default 5, 1-10) and relevance threshold (default 0.30, 0-0.8). Changing the embedding model means re-indexing every folder.
 - In Document and RAG modes the model is instructed to answer only from the provided text and to say when the answer isn't there.
-- Session history: chats are saved automatically and can be resumed or deleted from the sidebar; "New chat" starts fresh.
-- Model manager: lists .gguf files with size and quantization, loads one chat model at a time, and saves named profiles for quick switching.
-- Light and dark theme. The app interface is in English; how well the model handles other languages depends on the model (Qwen models are stronger multilingual).
+- Session history: chats are saved automatically, can be searched, resumed or deleted from the sidebar, and can all be deleted at once in Settings ("Delete all conversations"); "New chat" starts fresh. Each chat has an editable system prompt and temperature in its session panel.
+- Model manager: lists .gguf files with size on disk and quantization, labels each one as a Chat or Embedding model automatically, loads one chat model at a time, and saves named profiles (star button) for quick switching. A details panel shows the file name and location.
+- Settings page: theme (System, Light or Dark), the models folder path with an Open folder button, defaults for new chats (CPU threads 1-8, default 4; max response length 128-2048 tokens, default 1024; temperature 0-2, default 0.8), Delete all conversations, and version information. Everything is stored on the device.
+- The status bar shows live RAM and CPU usage.
+- The app interface is in English, but chat messages in Arabic or other right-to-left languages are laid out correctly. How well the model handles other languages depends on the model (Qwen models are stronger multilingual).
 
 LIMITS
-- Each conversation has a 4,096-token context window and answers are capped at about 1,024 tokens. Very long chats eventually report that the conversation is too long; start a new chat.
-- Embedding models cannot be used for chat; Rafeeq rejects them and they are loaded from RAG mode instead.
+- Each conversation has a fixed 4,096-token context window, and answers are capped by the max response length (1,024 tokens by default, adjustable in Settings). Very long chats eventually report that the conversation is too long; start a new chat.
+- Embedding models cannot be used for chat; Rafeeq rejects them, and they are selected on the Knowledge base page instead.
 - Speed depends on the CPU and the model size. No GPU is used or required.
 
 TECHNOLOGY AND REQUIREMENTS
