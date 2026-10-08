@@ -36,7 +36,16 @@
     "bannerSubtitle": "模型、运行环境和你的数据永远不会离开这台设备——这是可验证的事实，而非空口承诺。",
     "caption": "安装程序 {size} · MIT 许可 · macOS 和 Linux 版本即将推出",
     "ctaTitle": "让没有网络的电脑也用上 Rafeeq。",
-    "ctaBody": "安装后，通过 U 盘或文件共享拷贝一个模型文件，即可开始对话。"
+    "ctaBody": "安装后，通过 U 盘或文件共享拷贝一个模型文件，即可开始对话。",
+    "blockCodeTitle": "粘贴代码，获得解释。",
+    "blockManagerTitle": "使用你自己的模型。",
+    "blockDocsEyebrow": "文档",
+    "blockDocsTitle": "就你的文件提问。",
+    "blockDocsBody": "加载本地 .txt、.md、.docx 或 .pdf 文件，就其内容提问或获取摘要。整个文件夹可用本地 RAG 建立索引。所有计算都在本机完成。",
+    "blockOfflineTitle": "不必只听我们说。",
+    "offlineStep1": "阻断网络访问：使用防火墙规则、停用网卡或使用隔离的虚拟机。",
+    "offlineStep2": "启动 Rafeeq 并加载模型。",
+    "offlineStep3": "开始对话，一切照常运行。"
   },
   "features": {
     "title": "Rafeeq 的全部功能",

@@ -36,7 +36,16 @@
     "bannerSubtitle": "El modelo, el motor de ejecución y tus datos nunca salen del equipo — de forma verificable, no solo prometida.",
     "caption": "Instalador de {size} · Licencia MIT · macOS y Linux en camino",
     "ctaTitle": "Lleva Rafeeq a un equipo sin internet.",
-    "ctaBody": "Instálalo, copia un archivo de modelo por USB o carpeta compartida y empieza a conversar."
+    "ctaBody": "Instálalo, copia un archivo de modelo por USB o carpeta compartida y empieza a conversar.",
+    "blockCodeTitle": "Pega código. Obtén una explicación.",
+    "blockManagerTitle": "Usa tu propio modelo.",
+    "blockDocsEyebrow": "Documentos",
+    "blockDocsTitle": "Haz preguntas sobre tus archivos.",
+    "blockDocsBody": "Carga un archivo local .txt, .md, .docx o .pdf y pregunta sobre su contenido u obtén un resumen. Para carpetas enteras, indéxalas con RAG local. Todo se calcula en el dispositivo.",
+    "blockOfflineTitle": "No te fíes solo de nuestra palabra.",
+    "offlineStep1": "Bloquea el acceso a la red: una regla de firewall, un adaptador desactivado o una VM aislada.",
+    "offlineStep2": "Abre Rafeeq y carga un modelo.",
+    "offlineStep3": "Conversa. Funciona exactamente igual."
   },
   "features": {
     "title": "Todo lo que Rafeeq puede hacer",

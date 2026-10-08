@@ -36,7 +36,16 @@
     "bannerSubtitle": "The model, the runtime, and your data never leave the machine — verifiably, not just by policy.",
     "caption": "{size} installer · MIT licensed · macOS and Linux on the way",
     "ctaTitle": "Get Rafeeq on a machine that has no internet.",
-    "ctaBody": "Install it, copy a model file over by USB or file share, and start chatting."
+    "ctaBody": "Install it, copy a model file over by USB or file share, and start chatting.",
+    "blockCodeTitle": "Paste code. Get an explanation.",
+    "blockManagerTitle": "Bring your own model.",
+    "blockDocsEyebrow": "Documents",
+    "blockDocsTitle": "Ask questions about your files.",
+    "blockDocsBody": "Load a local .txt, .md, .docx or .pdf file and ask about its contents, or get a summary. For whole folders, index them with local RAG. Everything is computed on-device.",
+    "blockOfflineTitle": "Don't take our word for it.",
+    "offlineStep1": "Block network access: a firewall rule, a disabled adapter or an air-gapped VM.",
+    "offlineStep2": "Launch Rafeeq and load a model.",
+    "offlineStep3": "Chat. It runs identically."
   },
   "features": {
     "title": "Everything Rafeeq can do",

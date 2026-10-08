@@ -11,12 +11,21 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { WindowsIcon } from "@/components/ui/icons";
 import CtaBox from "@/components/CtaBox";
+import FeatureBlock from "@/components/home/FeatureBlock";
+import {
+  CodeHelpVisual,
+  DocumentVisual,
+  ModelManagerVisual,
+  OfflineSteps,
+} from "@/components/home/BlockVisuals";
 import { RELEASE, formatSize } from "@/lib/release";
 
 export default function HomePage() {
   const t = useTranslations("home");
   const download = useTranslations("download");
   const cta = useTranslations("cta");
+  const features = useTranslations("features");
+  const modes = useTranslations("modes");
   const locale = useLocale();
 
   const pillars = [1, 2, 3].map((n) => ({
@@ -98,6 +107,35 @@ export default function HomePage() {
           </Stagger>
         </Container>
       </section>
+
+      <Container className="flex flex-col gap-24 pt-24">
+        <FeatureBlock
+          eyebrow={modes("code")}
+          title={t("blockCodeTitle")}
+          body={features("codeDescription")}
+          visual={<CodeHelpVisual />}
+        />
+        <FeatureBlock
+          reverse
+          eyebrow={features("managerTitle")}
+          title={t("blockManagerTitle")}
+          body={features("managerDescription")}
+          visual={<ModelManagerVisual />}
+        />
+        <FeatureBlock
+          eyebrow={t("blockDocsEyebrow")}
+          title={t("blockDocsTitle")}
+          body={t("blockDocsBody")}
+          visual={<DocumentVisual />}
+        />
+        <FeatureBlock
+          reverse
+          eyebrow={features("offlineTitle")}
+          title={t("blockOfflineTitle")}
+          body={features("offlineDescription")}
+          visual={<OfflineSteps />}
+        />
+      </Container>
 
       <CtaBox title={t("ctaTitle")} body={t("ctaBody")} />
     </>
