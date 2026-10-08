@@ -45,7 +45,8 @@
     "blockOfflineTitle": "No te fíes solo de nuestra palabra.",
     "offlineStep1": "Bloquea el acceso a la red: una regla de firewall, un adaptador desactivado o una VM aislada.",
     "offlineStep2": "Abre Rafeeq y carga un modelo.",
-    "offlineStep3": "Conversa. Funciona exactamente igual."
+    "offlineStep3": "Conversa. Funciona exactamente igual.",
+    "shotAlt": "La pantalla de chat de Rafeeq con un modelo local cargado, funcionando sin conexión."
   },
   "features": {
     "title": "Todo lo que Rafeeq puede hacer",

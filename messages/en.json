@@ -45,7 +45,8 @@
     "blockOfflineTitle": "Don't take our word for it.",
     "offlineStep1": "Block network access: a firewall rule, a disabled adapter or an air-gapped VM.",
     "offlineStep2": "Launch Rafeeq and load a model.",
-    "offlineStep3": "Chat. It runs identically."
+    "offlineStep3": "Chat. It runs identically.",
+    "shotAlt": "The Rafeeq chat screen with a local model loaded, running offline."
   },
   "features": {
     "title": "Everything Rafeeq can do",

@@ -45,7 +45,8 @@
     "blockOfflineTitle": "Ne nous croyez pas sur parole.",
     "offlineStep1": "Bloquez l'accès au réseau : règle de pare-feu, carte réseau désactivée ou VM isolée.",
     "offlineStep2": "Lancez Rafeeq et chargez un modèle.",
-    "offlineStep3": "Discutez. Tout fonctionne à l'identique."
+    "offlineStep3": "Discutez. Tout fonctionne à l'identique.",
+    "shotAlt": "L'écran de discussion de Rafeeq avec un modèle local chargé, fonctionnant hors ligne."
   },
   "features": {
     "title": "Tout ce que Rafeeq peut faire",

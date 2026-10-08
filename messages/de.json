@@ -45,7 +45,8 @@
     "blockOfflineTitle": "Verlass dich nicht nur auf unser Wort.",
     "offlineStep1": "Sperre den Netzwerkzugriff: per Firewall-Regel, deaktiviertem Adapter oder isolierter VM.",
     "offlineStep2": "Starte Rafeeq und lade ein Modell.",
-    "offlineStep3": "Chatte los. Alles läuft genauso."
+    "offlineStep3": "Chatte los. Alles läuft genauso.",
+    "shotAlt": "Der Chat-Bildschirm von Rafeeq mit geladenem lokalem Modell, offline ausgeführt."
   },
   "features": {
     "title": "Alles, was Rafeeq kann",

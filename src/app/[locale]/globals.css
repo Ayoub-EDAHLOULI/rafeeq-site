@@ -129,6 +129,26 @@
   letter-spacing: normal;
 }
 
+/* Theme-specific images (Home product screenshot). Same rules as the color
+   tokens: the toggle's choice wins, the OS preference is the default. */
+.theme-dark-only {
+  display: none;
+}
+:root[data-theme="dark"] .theme-dark-only {
+  display: block;
+}
+:root[data-theme="dark"] .theme-light-only {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-dark-only {
+    display: block;
+  }
+  :root:not([data-theme="light"]) .theme-light-only {
+    display: none;
+  }
+}
+
 body {
   background: var(--bg);
   color: var(--text);

@@ -45,7 +45,8 @@
     "blockOfflineTitle": "不必只听我们说。",
     "offlineStep1": "阻断网络访问：使用防火墙规则、停用网卡或使用隔离的虚拟机。",
     "offlineStep2": "启动 Rafeeq 并加载模型。",
-    "offlineStep3": "开始对话，一切照常运行。"
+    "offlineStep3": "开始对话，一切照常运行。",
+    "shotAlt": "Rafeeq 的对话界面，已加载本地模型，正在离线运行。"
   },
   "features": {
     "title": "Rafeeq 的全部功能",

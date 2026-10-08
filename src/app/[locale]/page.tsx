@@ -12,6 +12,7 @@ import Button from "@/components/ui/Button";
 import { WindowsIcon } from "@/components/ui/icons";
 import CtaBox from "@/components/CtaBox";
 import FeatureBlock from "@/components/home/FeatureBlock";
+import ProductShot from "@/components/home/ProductShot";
 import {
   CodeHelpVisual,
   DocumentVisual,
@@ -78,6 +79,10 @@ export default function HomePage() {
           </Container>
         </section>
       </div>
+
+      <Container className="pb-24">
+        <ProductShot />
+      </Container>
 
       <section className="border-y border-line bg-panel">
         <Container className="py-20">
