@@ -51,7 +51,21 @@
     "sessionTitle": "Historique des sessions",
     "sessionDescription": "Les conversations sont enregistrées automatiquement et peuvent être reprises depuis la barre latérale, rien n'est perdu entre les sessions.",
     "offlineTitle": "Hors ligne, vérifiable",
-    "offlineDescription": "Un indicateur dans l'application et une liste de dépendances autorisées, tenue à jour manuellement, confirment qu'aucun plugin capable d'accéder au réseau n'est présent dans la version. Coupez votre réseau — Rafeeq fonctionne à l'identique."
+    "offlineDescription": "Un indicateur dans l'application et une liste de dépendances autorisées, tenue à jour manuellement, confirment qu'aucun plugin capable d'accéder au réseau n'est présent dans la version. Coupez votre réseau — Rafeeq fonctionne à l'identique.",
+    "goodTitle": "Bon à savoir",
+    "goodIntro": "Ce que Rafeeq fait et ne fait pas aujourd'hui, en toute clarté.",
+    "good1Title": "Discuter et expliquer, rien de plus",
+    "good1Body": "Rafeeq n'exécute jamais de code, ni en mode aide au code ni ailleurs.",
+    "good2Title": "CPU uniquement, aucun GPU requis",
+    "good2Body": "De petits modèles GGUF quantifiés tournent sur des machines ordinaires grâce à llama.cpp.",
+    "good3Title": "Vous apportez le modèle",
+    "good3Body": "L'installateur standard n'en inclut aucun. L'autre installateur comprend un petit modèle de démarrage, Qwen2.5-0.5B-Instruct.",
+    "good4Title": "Les longs documents sont tronqués",
+    "good4Body": "Seul le début d'un long document tient dans le contexte du modèle (environ 2 000 mots). Rafeeq vous prévient quand c'est le cas.",
+    "good5Title": "Windows d'abord",
+    "good5Body": "Les versions macOS et Linux arrivent bientôt.",
+    "ctaTitle": "Voyez-le fonctionner réseau coupé.",
+    "ctaBody": "Installez Rafeeq, bloquez l'accès au réseau et discutez."
   },
   "download": {
     "title": "Télécharger Rafeeq",
@@ -146,5 +160,8 @@
   },
   "common": {
     "offlineBadge": "Hors ligne · aucun appel réseau"
+  },
+  "cta": {
+    "docs": "Lire la documentation"
   }
 }

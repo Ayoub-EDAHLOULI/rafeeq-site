@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "inset";
 type Size = "md" | "sm";
 
 const VARIANTS: Record<Variant, string> = {
@@ -9,6 +9,8 @@ const VARIANTS: Record<Variant, string> = {
   primary: "bg-accent font-semibold text-on-accent hover:bg-accent/90",
   secondary:
     "border border-line bg-panel font-medium text-text hover:bg-panel-2",
+  // Secondary button placed on a panel (closing call-to-action box).
+  inset: "border border-line bg-bg font-medium text-text hover:bg-panel-2",
 };
 
 const SIZES: Record<Size, string> = {

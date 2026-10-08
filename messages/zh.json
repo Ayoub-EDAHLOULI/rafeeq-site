@@ -51,7 +51,21 @@
     "sessionTitle": "会话历史",
     "sessionDescription": "对话会自动保存，可从侧边栏随时恢复，不同会话之间的内容不会丢失。",
     "offlineTitle": "可验证的离线运行",
-    "offlineDescription": "应用内的状态指示器，加上人工维护的依赖白名单，共同确认此版本未注册任何具备联网能力的插件。断开网络——Rafeeq 依然照常运行。"
+    "offlineDescription": "应用内的状态指示器，加上人工维护的依赖白名单，共同确认此版本未注册任何具备联网能力的插件。断开网络——Rafeeq 依然照常运行。",
+    "goodTitle": "须知",
+    "goodIntro": "坦白说明 Rafeeq 目前能做什么、不能做什么。",
+    "good1Title": "只聊天和解释",
+    "good1Body": "无论在代码帮助模式还是其他地方，Rafeeq 都从不执行代码。",
+    "good2Title": "仅需 CPU，无需 GPU",
+    "good2Body": "借助 llama.cpp，小型量化 GGUF 模型可在普通电脑上运行。",
+    "good3Title": "模型由你自备",
+    "good3Body": "标准安装程序不含模型。另一个安装程序附带一个小型入门模型 Qwen2.5-0.5B-Instruct。",
+    "good4Title": "长文档会被截断",
+    "good4Body": "长文档只有开头部分能放入模型的上下文（约 3,000 个 token）。发生截断时 Rafeeq 会提示你。",
+    "good5Title": "先支持 Windows",
+    "good5Body": "macOS 和 Linux 版本即将推出。",
+    "ctaTitle": "断开网络，照样运行。",
+    "ctaBody": "安装 Rafeeq，屏蔽网络访问，然后开始对话。"
   },
   "download": {
     "title": "下载 Rafeeq",
@@ -146,5 +160,8 @@
   },
   "common": {
     "offlineBadge": "离线 · 无网络调用"
+  },
+  "cta": {
+    "docs": "阅读文档"
   }
 }

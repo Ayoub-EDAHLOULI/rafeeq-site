@@ -51,7 +51,21 @@
     "sessionTitle": "Historial de sesiones",
     "sessionDescription": "Las conversaciones se guardan automáticamente y se pueden retomar desde la barra lateral, así que no se pierde nada entre sesiones.",
     "offlineTitle": "Sin conexión, de forma verificable",
-    "offlineDescription": "Un indicador en la app y una lista de dependencias permitidas, mantenida manualmente, confirman que ningún plugin con capacidad de red está registrado en la versión. Bloquea tu red — Rafeeq funcionará igual."
+    "offlineDescription": "Un indicador en la app y una lista de dependencias permitidas, mantenida manualmente, confirman que ningún plugin con capacidad de red está registrado en la versión. Bloquea tu red — Rafeeq funcionará igual.",
+    "goodTitle": "Conviene saber",
+    "goodIntro": "Lo que Rafeeq hace y no hace hoy, dicho con claridad.",
+    "good1Title": "Solo conversa y explica",
+    "good1Body": "Rafeeq nunca ejecuta código, ni en el modo de ayuda con código ni en ningún otro.",
+    "good2Title": "Solo CPU, sin GPU",
+    "good2Body": "Modelos GGUF pequeños y cuantizados funcionan en equipos normales mediante llama.cpp.",
+    "good3Title": "Tú eliges el modelo",
+    "good3Body": "El instalador estándar no incluye ninguno. El otro instalador incluye un pequeño modelo inicial, Qwen2.5-0.5B-Instruct.",
+    "good4Title": "Los documentos largos se recortan",
+    "good4Body": "Solo el principio de un documento largo cabe en el contexto del modelo (unas 2000 palabras). Rafeeq te avisa cuando ocurre.",
+    "good5Title": "Primero Windows",
+    "good5Body": "Las versiones para macOS y Linux están en camino.",
+    "ctaTitle": "Míralo funcionar sin red.",
+    "ctaBody": "Instala Rafeeq, bloquea el acceso a la red y conversa."
   },
   "download": {
     "title": "Descargar Rafeeq",
@@ -146,5 +160,8 @@
   },
   "common": {
     "offlineBadge": "Sin conexión · ninguna llamada de red"
+  },
+  "cta": {
+    "docs": "Leer la documentación"
   }
 }

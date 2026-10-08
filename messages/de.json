@@ -51,7 +51,21 @@
     "sessionTitle": "Sitzungsverlauf",
     "sessionDescription": "Unterhaltungen werden automatisch gespeichert und können über die Seitenleiste fortgesetzt werden — nichts geht zwischen Sitzungen verloren.",
     "offlineTitle": "Nachweisbar offline",
-    "offlineDescription": "Eine Anzeige in der App sowie eine manuell gepflegte Positivliste erlaubter Abhängigkeiten bestätigen, dass kein netzwerkfähiges Plugin im Build registriert ist. Blockiere dein Netzwerk — Rafeeq läuft unverändert weiter."
+    "offlineDescription": "Eine Anzeige in der App sowie eine manuell gepflegte Positivliste erlaubter Abhängigkeiten bestätigen, dass kein netzwerkfähiges Plugin im Build registriert ist. Blockiere dein Netzwerk — Rafeeq läuft unverändert weiter.",
+    "goodTitle": "Gut zu wissen",
+    "goodIntro": "Was Rafeeq heute kann und was nicht, klar gesagt.",
+    "good1Title": "Nur chatten und erklären",
+    "good1Body": "Rafeeq führt niemals Code aus, weder im Code-Hilfe-Modus noch anderswo.",
+    "good2Title": "Nur CPU, keine GPU nötig",
+    "good2Body": "Kleine quantisierte GGUF-Modelle laufen über llama.cpp auf ganz normalen Rechnern.",
+    "good3Title": "Du bringst das Modell mit",
+    "good3Body": "Der Standard-Installer enthält keins. Der andere Installer bringt ein kleines Startmodell mit, Qwen2.5-0.5B-Instruct.",
+    "good4Title": "Lange Dokumente werden gekürzt",
+    "good4Body": "Nur der Anfang eines langen Dokuments passt in den Kontext des Modells (etwa 2.000 Wörter). Rafeeq weist dich darauf hin.",
+    "good5Title": "Zuerst Windows",
+    "good5Body": "macOS- und Linux-Builds folgen.",
+    "ctaTitle": "Sieh es ohne Netzwerk laufen.",
+    "ctaBody": "Installiere Rafeeq, sperre den Netzwerkzugriff und chatte los."
   },
   "download": {
     "title": "Rafeeq herunterladen",
@@ -146,5 +160,8 @@
   },
   "common": {
     "offlineBadge": "Offline · keine Netzwerkzugriffe"
+  },
+  "cta": {
+    "docs": "Zur Dokumentation"
   }
 }
