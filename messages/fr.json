@@ -168,7 +168,8 @@
     "ragDescription": "Questions sur un dossier."
   },
   "common": {
-    "offlineBadge": "Hors ligne · aucun appel réseau"
+    "offlineBadge": "Hors ligne · aucun appel réseau",
+    "backToTop": "Retour en haut"
   },
   "cta": {
     "docs": "Lire la documentation"

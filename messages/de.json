@@ -168,7 +168,8 @@
     "ragDescription": "Fragen zu einem Ordner."
   },
   "common": {
-    "offlineBadge": "Offline · keine Netzwerkzugriffe"
+    "offlineBadge": "Offline · keine Netzwerkzugriffe",
+    "backToTop": "Nach oben"
   },
   "cta": {
     "docs": "Zur Dokumentation"

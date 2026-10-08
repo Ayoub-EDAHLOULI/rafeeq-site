@@ -168,7 +168,8 @@
     "ragDescription": "Pregunta sobre una carpeta."
   },
   "common": {
-    "offlineBadge": "Sin conexión · ninguna llamada de red"
+    "offlineBadge": "Sin conexión · ninguna llamada de red",
+    "backToTop": "Volver arriba"
   },
   "cta": {
     "docs": "Leer la documentación"

@@ -168,7 +168,8 @@
     "ragDescription": "就整个文件夹提问。"
   },
   "common": {
-    "offlineBadge": "离线 · 无网络调用"
+    "offlineBadge": "离线 · 无网络调用",
+    "backToTop": "返回顶部"
   },
   "cta": {
     "docs": "阅读文档"

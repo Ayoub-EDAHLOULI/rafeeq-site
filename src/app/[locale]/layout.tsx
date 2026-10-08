@@ -8,6 +8,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/motion/MotionProvider";
 import ChatWidget from "@/components/assistant/ChatWidget";
+import ScrollToTop from "@/components/ScrollToTop";
 import { routing, rtlLocales } from "@/i18n/routing";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
@@ -111,6 +112,7 @@ export default async function LocaleLayout({
             <Nav />
             <main className="flex-1">{children}</main>
             <Footer />
+            <ScrollToTop />
             <ChatWidget />
           </MotionProvider>
         </NextIntlClientProvider>

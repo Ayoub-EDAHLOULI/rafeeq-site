@@ -168,7 +168,8 @@
     "ragDescription": "Ask about a folder."
   },
   "common": {
-    "offlineBadge": "Offline · no network calls"
+    "offlineBadge": "Offline · no network calls",
+    "backToTop": "Back to top"
   },
   "cta": {
     "docs": "Read the docs"

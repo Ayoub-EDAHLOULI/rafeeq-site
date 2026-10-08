@@ -120,3 +120,11 @@ export function ClockIcon(props: IconProps) {
     </Stroke>
   );
 }
+
+export function ArrowUpIcon(props: IconProps) {
+  return (
+    <Stroke {...props}>
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </Stroke>
+  );
+}
