@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/metadata";
 import { useLocale, useTranslations } from "next-intl";
 import {
   Press,
@@ -24,7 +25,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "download" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({
+    locale,
+    path: "/download",
+    title: t("title"),
+    socialTitle: `${t("title")} — Rafeeq`,
+    description: t("subtitle"),
+  });
 }
 
 export default function DownloadPage() {

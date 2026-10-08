@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/metadata";
 import ParticleField from "@/components/ParticleField";
 import {
   AnimatedWords,
@@ -20,6 +23,23 @@ import {
   OfflineSteps,
 } from "@/components/home/BlockVisuals";
 import { RELEASE, formatSize } from "@/lib/release";
+
+// Home keeps the layout's full default title; this adds the social and
+// language tags.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return pageMetadata({
+    locale,
+    path: "",
+    socialTitle: t("title"),
+    description: t("description"),
+  });
+}
 
 export default function HomePage() {
   const t = useTranslations("home");

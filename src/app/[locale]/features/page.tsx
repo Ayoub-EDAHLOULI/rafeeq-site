@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/metadata";
 import { useTranslations } from "next-intl";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import Container from "@/components/ui/Container";
@@ -23,7 +24,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "features" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata({
+    locale,
+    path: "/features",
+    title: t("title"),
+    socialTitle: `${t("title")} — Rafeeq`,
+    description: t("subtitle"),
+  });
 }
 
 type Feature = {
