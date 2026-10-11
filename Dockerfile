@@ -9,6 +9,9 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# public/ is empty in this project and git does not store empty folders, so
+# it may not exist in the checkout. Create it so the runner's COPY works.
+RUN mkdir -p public
 RUN npm run build
 
 # --- runner: minimal production image, just the standalone server output ---
