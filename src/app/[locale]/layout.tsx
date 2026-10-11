@@ -10,7 +10,7 @@ import MotionProvider from "@/components/motion/MotionProvider";
 import ChatWidget from "@/components/assistant/ChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import { routing, rtlLocales } from "@/i18n/routing";
-import { THEME_INIT_SCRIPT } from "@/lib/theme";
+import ThemeScript from "@/components/ThemeScript";
 import "./globals.css";
 
 // Fonts are downloaded at build time and served from this site; the browser
@@ -104,7 +104,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <ThemeScript />
       </head>
       <body className="flex min-h-full flex-col bg-bg text-text">
         <NextIntlClientProvider>
